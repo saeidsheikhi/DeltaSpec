@@ -1,0 +1,88 @@
+{
+  "frozen_at": "2026-09-05T08:33:56Z",
+  "system": "EffectGate hash-only AppWorld representation, DSL v0.3",
+  "state_view": "counts + {record_id: record_hash} maps; no field values",
+  "files": {
+    "prompts/contract_compiler_appworld_v3.md": "43bdc925588c2f20fad2b50e08dd12626316bfa4535fc2493e7b5ea4402d3198",
+    "prompts/contract_repair_appworld_v3.md": "f0578b479f7063e56cd84e76d961d2b715aab8f14eca01ba8b1a3d2969815a24",
+    "prompts/contract_compiler_appworld.md": "fcf5858e2c6ea0e016e48778e801771365dc9137e50e85efe4ec5331b935b403",
+    "prompts/contract_repair.md": "5ce526ec81699684293834a22fcd556406973c4b3c47ca3a7bc2ac4b6f689ed1",
+    "prompts/contract_repair_syntax.md": "95eb2afd74c06c4b720e03dfc8dd857d442102006cf8f6bf86e5e4708ae9d1a2",
+    "configs/models.yaml": "929d480dc93e4e54ad53c800d435bb5aff755e1f8d4be47fb8ecfc760db931ab",
+    "configs/experiments.yaml": "df38839be815ccea9c080ccff81d2361f00e0e2cc83e416d7b046b3e1564e51a",
+    "pyproject.toml": "55b3f1f00b09e11bc7e0069dff463f0b951d8e2945abb543b5df92d3a42e608c",
+    "scripts/appworld_worker.py": "8809de477df98eba9277a4348b93ae1e921915bf1b9d76ea48abe25bf1ce3e44",
+    "scripts/run_appworld_sanity.py": "d8f6344ffb6d08083dbaf43f312eef97e9795619291d2cc31bd2a8f78a7dac45",
+    "scripts/run_appworld_pilot.sh": "a5d99d4ff16f26c3b147fa8921bc45b3c4e081d53177e20dcfb96729a3174996",
+    "src/effectgate/contracts/evaluator.py": "f7b056004efa08043b52c1b64ebe7dab0d921cdec680068588bd001d7289532f",
+    "src/effectgate/contracts/schema.py": "0e9b1e8e1346a6b775c111ccd49e6e60e3b880a5129324f70337e721b080f2f4",
+    "src/effectgate/models.py": "e9e85b739a921f45de9b733686e74f5ca5b3fcdfd7175f89fe26c496bd881f9a",
+    "src/effectgate/adapters/appworld_adapter.py": "0d17ed987f206784cbdfbaf69a488193159332ed972360bd9f82503bf1df3376",
+    "results/appworld_phaseB/analysis_phaseB_sanity_20260905.json": "f565ff620a7a232adfa84c38e4fe9fe6d4f842b87cd03f413f1367b15c34a0ae",
+    "results/appworld_phaseB/failure_taxonomy_phaseB_sanity_20260905.json": "58dc8bd371a6d15b4ae060d53128237ab6ec3f1cbba53f35f8897ef6ebcce073",
+    "results/appworld_phaseB/prompts/phaseB_sanity_20260905.compiler.md": "43bdc925588c2f20fad2b50e08dd12626316bfa4535fc2493e7b5ea4402d3198",
+    "results/appworld_phaseB/prompts/phaseB_sanity_20260905.repair.md": "f0578b479f7063e56cd84e76d961d2b715aab8f14eca01ba8b1a3d2969815a24",
+    "results/appworld_phaseB/provider_calls.jsonl": "dec80d76c875db38fb9568b74a63c468297c1c4822008564dad9f6d6c5f78818",
+    "results/appworld_phaseB/sanity_manifest.json": "7381b2e52ebe40990db80fd9e876878fe5c32b7c1d39bf986946d5746957d581",
+    "results/appworld_phaseB/sanity_manifest.phaseB_sanity_20260905.json": "7381b2e52ebe40990db80fd9e876878fe5c32b7c1d39bf986946d5746957d581",
+    "results/appworld_phaseB/sanity_runs.jsonl": "1ada68d87b1da83bb6da5d08710d3da86d2b464c90005e4cf014e758a79d0096",
+    "results/appworld_phaseB/sanity_summary.json": "47995989a208133b8df2be24b45d81726865436886d3f118b99ba78c8694314a",
+    "results/appworld_pilot/analysis_pilotA_baseline.json": "fc6752c540ddfd377b2e79425b3c7820564405e9e793d2e730ac68698b7f3e38",
+    "results/appworld_pilot/analysis_pilotB_syntax_repair.json": "6a1fd2bcb770d52ef8498fed32cb0c5e4806a75ff56ddea1522905d34852fe2e",
+    "results/appworld_pilot/failure_taxonomy_pilotA_baseline.json": "17e55a315918ad4934fbe302f8b4147a9e5188313ec235252496acc3499202e1",
+    "results/appworld_pilot/failure_taxonomy_pilotB_syntax_repair.json": "d13c5ccb2f77252313107d825de198232344fa9fea5c9d5608ea6b14ff90fce1",
+    "results/appworld_pilot/prompts/pilotA_baseline.compiler.md": "43bdc925588c2f20fad2b50e08dd12626316bfa4535fc2493e7b5ea4402d3198",
+    "results/appworld_pilot/prompts/pilotA_baseline.repair.md": "f0578b479f7063e56cd84e76d961d2b715aab8f14eca01ba8b1a3d2969815a24",
+    "results/appworld_pilot/prompts/pilotB_syntax_repair.compiler.md": "43bdc925588c2f20fad2b50e08dd12626316bfa4535fc2493e7b5ea4402d3198",
+    "results/appworld_pilot/prompts/pilotB_syntax_repair.repair.md": "f0578b479f7063e56cd84e76d961d2b715aab8f14eca01ba8b1a3d2969815a24",
+    "results/appworld_pilot/provider_calls.jsonl": "bb7e26da7f6f2eb52a40267c2d5e2e4b4ce7c238f90090410969c51850bc4cd5",
+    "results/appworld_pilot/sanity_manifest.json": "5ff5d0629c890ea215e2ffd27bc204eb167126fc27ef5642f8c3f372ccb536de",
+    "results/appworld_pilot/sanity_manifest.pilotA_baseline.json": "1ad8a7e6da6d23b0705f3252b6888f8bc3cc99f4061010ef9d8dd0ff14638867",
+    "results/appworld_pilot/sanity_manifest.pilotB_syntax_repair.json": "5ff5d0629c890ea215e2ffd27bc204eb167126fc27ef5642f8c3f372ccb536de",
+    "results/appworld_pilot/sanity_runs.jsonl": "f64eb9e377812fcf6a6c6271fefebb5ae6dc2b65fbd5f8266f97a62246a7faa2",
+    "results/appworld_pilot/sanity_summary.json": "dfefa640ab2b7e6a507e5e324e92afc0519067f8c4f2e200fc331726ff8dd9f9"
+  },
+  "env": {
+    "EFFECTGATE_PROVIDER": "ollama",
+    "OLLAMA_BASE_URL": "http://100.76.170.53:11434",
+    "OLLAMA_TIMEOUT_S": "900",
+    "OLLAMA_DEFAULT_MODEL": "gemma3:27b",
+    "OPENROUTER_ENABLED": "false",
+    "OPENROUTER_BASE_URL": "https://openrouter.ai/api/v1",
+    "OPENROUTER_MODEL": "",
+    "OPENROUTER_HTTP_REFERER": "",
+    "OPENROUTER_APP_TITLE": "EffectGateResearch",
+    "EFFECTGATE_RUNS_DIR": "runs",
+    "EFFECTGATE_RESULTS_DIR": "results",
+    "EFFECTGATE_SEED": "42",
+    "EFFECTGATE_FAIL_CLOSED": "true",
+    "APPWORLD_ROOT": "/home/csipc/appworld-root"
+  },
+  "condition_labels_frozen": [
+    "phaseB_sanity_20260905",
+    "pilotA_baseline",
+    "pilotB_syntax_repair",
+    "contract_compiler_appworld_v3",
+    "contract_compiler_appworld_v3_refined",
+    "contract_compiler_appworld_v3_refined_v2"
+  ],
+  "headline": {
+    "pilot_paired_n": 7,
+    "compiles_clean": {
+      "A": "5/7",
+      "B_syntax_repair": "6/7",
+      "mcnemar_p": 1.0
+    },
+    "agrees_with_official": {
+      "A": "2/7",
+      "B_syntax_repair": "2/7",
+      "mcnemar_p": 1.0
+    },
+    "mean_wall_s": {
+      "A": 519,
+      "B_syntax_repair": 702,
+      "delta": "+35%"
+    },
+    "status": "PRESERVED NEGATIVE RESULT \u2014 do not reinterpret"
+  }
+}

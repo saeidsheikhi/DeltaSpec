@@ -1,0 +1,165 @@
+[
+  {
+    "task_id": "b119b1f_2",
+    "valid_reference": true,
+    "official_success": true,
+    "n_state_reqs": 5,
+    "execution_error": null,
+    "changed_tables": [
+      "spotify.MusicPlayer"
+    ],
+    "wall_s": 22.3
+  },
+  {
+    "task_id": "530b157_3",
+    "valid_reference": true,
+    "official_success": true,
+    "n_state_reqs": 9,
+    "execution_error": null,
+    "changed_tables": [
+      "phone.GlobalTextMessage",
+      "phone.UserTextMessage",
+      "venmo.Notification",
+      "venmo.Transaction",
+      "venmo.User"
+    ],
+    "wall_s": 23.0
+  },
+  {
+    "task_id": "aa8502b_2",
+    "valid_reference": true,
+    "official_success": true,
+    "n_state_reqs": 3,
+    "execution_error": null,
+    "changed_tables": [
+      "spotify.UserArtistFollowing"
+    ],
+    "wall_s": 22.4
+  },
+  {
+    "task_id": "e3d6c94_3",
+    "valid_reference": true,
+    "official_success": true,
+    "n_state_reqs": 8,
+    "execution_error": null,
+    "changed_tables": [
+      "spotify.Playlist",
+      "spotify.PlaylistSong"
+    ],
+    "wall_s": 21.7
+  },
+  {
+    "task_id": "34d9492_2",
+    "valid_reference": true,
+    "official_success": true,
+    "n_state_reqs": 4,
+    "execution_error": null,
+    "changed_tables": [
+      "file_system.Directory",
+      "file_system.File"
+    ],
+    "wall_s": 38.1
+  },
+  {
+    "task_id": "6c2c621_2",
+    "valid_reference": true,
+    "official_success": true,
+    "n_state_reqs": 7,
+    "execution_error": null,
+    "changed_tables": [
+      "file_system.Directory",
+      "file_system.File"
+    ],
+    "wall_s": 22.0
+  },
+  {
+    "task_id": "d4e9306_3",
+    "valid_reference": true,
+    "official_success": true,
+    "n_state_reqs": 5,
+    "execution_error": null,
+    "changed_tables": [
+      "spotify.UserArtistFollowing"
+    ],
+    "wall_s": 21.2
+  },
+  {
+    "task_id": "c901732_2",
+    "valid_reference": true,
+    "official_success": true,
+    "n_state_reqs": 5,
+    "execution_error": null,
+    "changed_tables": [
+      "spotify.MusicPlayer"
+    ],
+    "wall_s": 20.9
+  },
+  {
+    "task_id": "0d8a4ee_2",
+    "valid_reference": false,
+    "official_success": false,
+    "n_state_reqs": 4,
+    "execution_error": "Execution failed. Traceback:\n  File \"<python-input>\", line 57, in <module>\n    solution(apis, requester)\n  File \"<python-input>\", line 39, in solution\n    profile = apis.venmo.show_profile(\n              ^^^^^^^^^^^^^^^^^^^^^^^^\nException: Response status code is 422:\n{\"message\":\"Account for this email does not exist.\"}",
+    "changed_tables": [],
+    "wall_s": 23.5
+  },
+  {
+    "task_id": "3c13f5a_1",
+    "valid_reference": true,
+    "official_success": true,
+    "n_state_reqs": 5,
+    "execution_error": null,
+    "changed_tables": [
+      "venmo.Notification",
+      "venmo.PaymentRequest"
+    ],
+    "wall_s": 22.9
+  },
+  {
+    "task_id": "57c3486_2",
+    "valid_reference": true,
+    "official_success": true,
+    "n_state_reqs": 4,
+    "execution_error": null,
+    "changed_tables": [
+      "spotify.Song",
+      "spotify.SongLike"
+    ],
+    "wall_s": 21.4
+  },
+  {
+    "task_id": "df61dc5_1",
+    "valid_reference": true,
+    "official_success": true,
+    "n_state_reqs": 6,
+    "execution_error": null,
+    "changed_tables": [
+      "venmo.Transaction",
+      "venmo.TransactionLike"
+    ],
+    "wall_s": 21.8
+  },
+  {
+    "task_id": "68ee2c9_3",
+    "valid_reference": true,
+    "official_success": true,
+    "n_state_reqs": 4,
+    "execution_error": null,
+    "changed_tables": [
+      "file_system.Directory",
+      "file_system.File"
+    ],
+    "wall_s": 22.5
+  },
+  {
+    "task_id": "396c5a2_2",
+    "valid_reference": true,
+    "official_success": true,
+    "n_state_reqs": 5,
+    "execution_error": null,
+    "changed_tables": [
+      "spotify.MusicPlayer"
+    ],
+    "wall_s": 20.8
+  }
+]

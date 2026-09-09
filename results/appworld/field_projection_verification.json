@@ -1,0 +1,127 @@
+{
+  "hash_only_unchanged": {
+    "pre_state_hash_now": "48bd8645370d66bf",
+    "pre_state_hash_frozen": "48bd8645370d66bf",
+    "keys": [
+      "counts",
+      "records"
+    ],
+    "prompt_view_keys": [
+      "counts",
+      "path_syntax",
+      "sample_rows",
+      "table_fields",
+      "valid_path_roots"
+    ],
+    "wall_s": 12.2
+  },
+  "field_aware_cf6abd2_1": {
+    "wall_s": 12.3,
+    "tier0_bytes": 8809680,
+    "tier1_bytes": 42956,
+    "prompt_view_bytes": 11348,
+    "prompt_view_keys": [
+      "counts",
+      "path_syntax",
+      "projection",
+      "record_tables",
+      "sample_rows",
+      "schema",
+      "supervisor_user_ids",
+      "valid_path_roots"
+    ],
+    "projected_tables": {
+      "simple_note.Note": {
+        "scope": "owner",
+        "n_total": 22,
+        "n_projected": 22,
+        "truncated": false
+      },
+      "simple_note.User": {
+        "scope": "fk_hop",
+        "n_total": 0,
+        "n_projected": 0,
+        "truncated": false
+      }
+    },
+    "supervisor_user_ids": {
+      "simple_note": 12
+    },
+    "note_field_types": {
+      "record_hash": "str",
+      "id": "int",
+      "user_id": "int",
+      "title": "str",
+      "content": "str",
+      "tags": "list",
+      "created_at": "datetime",
+      "updated_at": "datetime",
+      "pinned": "bool",
+      "data": "list"
+    },
+    "bucket_list_rows": [
+      [
+        "318",
+        "My Bucket List ([x] = done, [ ] = not done))",
+        "# My Bucket List ([x] = done, [ ] = not done))\n\n[x] Riding the Trans-Siberian Ra"
+      ]
+    ],
+    "fields_hash": "201fb5474fb70a8d67afbe8a21c49735948b2d2662962db774fc7848d556d882"
+  },
+  "replay_b0a8eae_1": {
+    "wall_s": 52.6,
+    "tier1_bytes_pre": 82525,
+    "restore_exact_incl_fields": true,
+    "residual": {},
+    "post_fields_hash_run1": "177401fe20fee29be7954cc2bd2e6ba08930b4258ed9b511545ad5ce3ff1eeb2",
+    "post_fields_hash_run2": "177401fe20fee29be7954cc2bd2e6ba08930b4258ed9b511545ad5ce3ff1eeb2",
+    "replay_reproduces_fields": true,
+    "changed_tables": [
+      "spotify.MusicPlayer"
+    ],
+    "MusicPlayer_pre": {
+      "104": {
+        "is_playing": false,
+        "queue_song_ids": [],
+        "cursor_position": null
+      }
+    },
+    "MusicPlayer_post": {
+      "104": {
+        "is_playing": true,
+        "queue_song_ids": [
+          80
+        ],
+        "cursor_position": 0
+      }
+    },
+    "official_success": true,
+    "Song_fk_hop": {
+      "spotify.MusicPlayer": {
+        "scope": "owner",
+        "n_total": 1,
+        "n_projected": 1,
+        "truncated": false
+      },
+      "spotify.Playlist": {
+        "scope": "owner",
+        "n_total": 8,
+        "n_projected": 8,
+        "truncated": false
+      },
+      "spotify.PlaylistSong": {
+        "scope": "fk_hop",
+        "n_total": 0,
+        "n_projected": 0,
+        "truncated": false
+      },
+      "spotify.Song": {
+        "scope": "fk_hop",
+        "n_total": 71,
+        "n_projected": 71,
+        "truncated": false
+      }
+    },
+    "close_error": "AttributeError: '_freeze_time' object has no attribute 'fake_names'"
+  }
+}

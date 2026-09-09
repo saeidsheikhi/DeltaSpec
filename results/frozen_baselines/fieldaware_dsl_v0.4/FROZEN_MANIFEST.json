@@ -1,0 +1,30 @@
+{
+  "frozen_at": "2026-09-05T12:32:00Z",
+  "system": "field-aware DSL v0.4 (tiers 0+1, record/scope predicates), condition fieldaware_v04_diag",
+  "headline": {
+    "paired_n": 7,
+    "agreement": "0/7 (baseline 2/7)",
+    "accepts_known_good": "0/7",
+    "clean_compilation": "4/7",
+    "wall_time": "+41%",
+    "status": "PRESERVED NEGATIVE RESULT \u2014 mechanism verified, compiled contracts failed; two regressions from v4 prompt; join ceiling identified"
+  },
+  "files": {
+    "scripts/appworld_worker.py": "040aa9c1cff44f9d14fbf2925cbf80e280dd75d3d56d0faf50ac22a28ca86a7b",
+    "prompts/contract_compiler_appworld_v4_fields.md": "02bc229748fb80f5ba5656775b9c8abac3b0b928c9010a2fef5240176b8bcdee",
+    "prompts/contract_repair_appworld_v4_fields.md": "95d58c4701db1f8b768f04c7301fec8011b56466bdfe2dfb620bb5d6e7d63232",
+    "results/appworld_fieldaware/sanity_runs.jsonl": "111002455b451c27e0d3f4159754bdee4c4444c3c899c645dcfabe384f985492",
+    "results/appworld_fieldaware/analysis_fieldaware_v04_diag.json": "f1cf2f8e69b375e46a1bbb699a1ecf01749dc26c9b2292e8cb555dfdb16951e0",
+    "results/appworld_fieldaware/provider_calls.jsonl": "dccaf38610c25b8a698c88c3cd03baa7dd6e9d012862e32cbe9f8fc88e1f6935",
+    "results/appworld_fieldaware/comparison_fieldaware_v04_diag.json": "37294ab8795df57bcaee3819608ba62ef773dc8be026c9c151824df2ac9063bd",
+    "results/appworld_fieldaware/sanity_manifest.fieldaware_v04_diag.json": "ef3a9b031a33d56afd3b2c8089acdda57fa5064501c26e560793452ce7653e56",
+    "results/appworld_fieldaware/sanity_summary.json": "748f192b8e783e9537b1d291f8daf45b29f842a681f613bb776243abe7a06fb0",
+    "results/appworld_fieldaware/sanity_manifest.json": "ef3a9b031a33d56afd3b2c8089acdda57fa5064501c26e560793452ce7653e56",
+    "results/frozen_systems/fieldaware_dsl_v0.4.json": "04e697e4991f3638d0930ac47384580967a891cebd300e0150168668d9023771",
+    "results/appworld_fieldaware/prompts/fieldaware_v04_diag.repair.md": "95d58c4701db1f8b768f04c7301fec8011b56466bdfe2dfb620bb5d6e7d63232",
+    "results/appworld_fieldaware/prompts/fieldaware_v04_diag.compiler.md": "02bc229748fb80f5ba5656775b9c8abac3b0b928c9010a2fef5240176b8bcdee",
+    "src/effectgate/models.py": "96e624aba64359619b94c2e7ccbd98b39605858b641b1ac137394b7cdfcc0fa2",
+    "src/effectgate/contracts/fieldview.py": "eabf0d87f4a553dd95a4a3de5cbdc06c3c9d1947fe4b02b5f0b9daf525802fcb",
+    "src/effectgate/contracts/schema.py": "a5ec3c4822a761b060323bc2230bbae2829a6d84cc98910c2f75176e7cd6c1a3"
+  }
+}

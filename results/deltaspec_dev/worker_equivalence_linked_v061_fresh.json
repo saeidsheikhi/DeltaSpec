@@ -1,0 +1,252 @@
+{
+  "condition": "linked_v061_fresh",
+  "n": 13,
+  "pre_match": 13,
+  "post_match": 13,
+  "changed_match": 13,
+  "rows": [
+    {
+      "task_id": "b119b1f_2",
+      "pre_hash_recorded": "b65bcacc2ba713d9",
+      "pre_hash_now": "b65bcacc2ba713d9",
+      "post_hash_recorded": "b65bcacc2ba713d9",
+      "post_hash_now": "b65bcacc2ba713d9",
+      "changed_tables_recorded": [
+        "spotify.MusicPlayer"
+      ],
+      "changed_tables_now": [
+        "spotify.MusicPlayer"
+      ],
+      "pre_match": true,
+      "post_match": true,
+      "changed_match": true,
+      "s": 21.9
+    },
+    {
+      "task_id": "530b157_3",
+      "pre_hash_recorded": "9affe59d43de445b",
+      "pre_hash_now": "9affe59d43de445b",
+      "post_hash_recorded": "a363c8ac9452d48b",
+      "post_hash_now": "a363c8ac9452d48b",
+      "changed_tables_recorded": [
+        "phone.GlobalTextMessage",
+        "phone.UserTextMessage",
+        "venmo.Notification",
+        "venmo.Transaction",
+        "venmo.User"
+      ],
+      "changed_tables_now": [
+        "phone.GlobalTextMessage",
+        "phone.UserTextMessage",
+        "venmo.Notification",
+        "venmo.Transaction",
+        "venmo.User"
+      ],
+      "pre_match": true,
+      "post_match": true,
+      "changed_match": true,
+      "s": 21.2
+    },
+    {
+      "task_id": "aa8502b_2",
+      "pre_hash_recorded": "813a25da24fd05ef",
+      "pre_hash_now": "813a25da24fd05ef",
+      "post_hash_recorded": "ecd8646c5da9a7f7",
+      "post_hash_now": "ecd8646c5da9a7f7",
+      "changed_tables_recorded": [
+        "spotify.UserArtistFollowing"
+      ],
+      "changed_tables_now": [
+        "spotify.UserArtistFollowing"
+      ],
+      "pre_match": true,
+      "post_match": true,
+      "changed_match": true,
+      "s": 22.0
+    },
+    {
+      "task_id": "e3d6c94_3",
+      "pre_hash_recorded": "48bd8645370d66bf",
+      "pre_hash_now": "48bd8645370d66bf",
+      "post_hash_recorded": "8504f58b6792b18c",
+      "post_hash_now": "8504f58b6792b18c",
+      "changed_tables_recorded": [
+        "spotify.Playlist",
+        "spotify.PlaylistSong"
+      ],
+      "changed_tables_now": [
+        "spotify.Playlist",
+        "spotify.PlaylistSong"
+      ],
+      "pre_match": true,
+      "post_match": true,
+      "changed_match": true,
+      "s": 21.5
+    },
+    {
+      "task_id": "34d9492_2",
+      "pre_hash_recorded": "1369c9a06a918561",
+      "pre_hash_now": "1369c9a06a918561",
+      "post_hash_recorded": "2d7ef123c63b9bf9",
+      "post_hash_now": "2d7ef123c63b9bf9",
+      "changed_tables_recorded": [
+        "file_system.Directory",
+        "file_system.File"
+      ],
+      "changed_tables_now": [
+        "file_system.Directory",
+        "file_system.File"
+      ],
+      "pre_match": true,
+      "post_match": true,
+      "changed_match": true,
+      "s": 23.8
+    },
+    {
+      "task_id": "6c2c621_2",
+      "pre_hash_recorded": "48bd8645370d66bf",
+      "pre_hash_now": "48bd8645370d66bf",
+      "post_hash_recorded": "5e7d99e1994d5479",
+      "post_hash_now": "5e7d99e1994d5479",
+      "changed_tables_recorded": [
+        "file_system.Directory",
+        "file_system.File"
+      ],
+      "changed_tables_now": [
+        "file_system.Directory",
+        "file_system.File"
+      ],
+      "pre_match": true,
+      "post_match": true,
+      "changed_match": true,
+      "s": 22.2
+    },
+    {
+      "task_id": "d4e9306_3",
+      "pre_hash_recorded": "0adaeabb6b88258d",
+      "pre_hash_now": "0adaeabb6b88258d",
+      "post_hash_recorded": "7d18a91b99c4b2e9",
+      "post_hash_now": "7d18a91b99c4b2e9",
+      "changed_tables_recorded": [
+        "spotify.UserArtistFollowing"
+      ],
+      "changed_tables_now": [
+        "spotify.UserArtistFollowing"
+      ],
+      "pre_match": true,
+      "post_match": true,
+      "changed_match": true,
+      "s": 21.7
+    },
+    {
+      "task_id": "c901732_2",
+      "pre_hash_recorded": "b65bcacc2ba713d9",
+      "pre_hash_now": "b65bcacc2ba713d9",
+      "post_hash_recorded": "b65bcacc2ba713d9",
+      "post_hash_now": "b65bcacc2ba713d9",
+      "changed_tables_recorded": [
+        "spotify.MusicPlayer"
+      ],
+      "changed_tables_now": [
+        "spotify.MusicPlayer"
+      ],
+      "pre_match": true,
+      "post_match": true,
+      "changed_match": true,
+      "s": 21.7
+    },
+    {
+      "task_id": "3c13f5a_1",
+      "pre_hash_recorded": "0f154ace45d51f3d",
+      "pre_hash_now": "0f154ace45d51f3d",
+      "post_hash_recorded": "586e81a7e5286716",
+      "post_hash_now": "586e81a7e5286716",
+      "changed_tables_recorded": [
+        "venmo.Notification",
+        "venmo.PaymentRequest"
+      ],
+      "changed_tables_now": [
+        "venmo.Notification",
+        "venmo.PaymentRequest"
+      ],
+      "pre_match": true,
+      "post_match": true,
+      "changed_match": true,
+      "s": 21.7
+    },
+    {
+      "task_id": "57c3486_2",
+      "pre_hash_recorded": "bef03de52ca2a863",
+      "pre_hash_now": "bef03de52ca2a863",
+      "post_hash_recorded": "49688600ba60b6fa",
+      "post_hash_now": "49688600ba60b6fa",
+      "changed_tables_recorded": [
+        "spotify.Song",
+        "spotify.SongLike"
+      ],
+      "changed_tables_now": [
+        "spotify.Song",
+        "spotify.SongLike"
+      ],
+      "pre_match": true,
+      "post_match": true,
+      "changed_match": true,
+      "s": 22.0
+    },
+    {
+      "task_id": "df61dc5_1",
+      "pre_hash_recorded": "7cd3b4bc881e7d9a",
+      "pre_hash_now": "7cd3b4bc881e7d9a",
+      "post_hash_recorded": "ed4498dc04d5a983",
+      "post_hash_now": "ed4498dc04d5a983",
+      "changed_tables_recorded": [
+        "venmo.Transaction",
+        "venmo.TransactionLike"
+      ],
+      "changed_tables_now": [
+        "venmo.Transaction",
+        "venmo.TransactionLike"
+      ],
+      "pre_match": true,
+      "post_match": true,
+      "changed_match": true,
+      "s": 22.1
+    },
+    {
+      "task_id": "68ee2c9_3",
+      "pre_hash_recorded": "48bd8645370d66bf",
+      "pre_hash_now": "48bd8645370d66bf",
+      "post_hash_recorded": "48bd8645370d66bf",
+      "post_hash_now": "48bd8645370d66bf",
+      "changed_tables_recorded": [
+        "file_system.Directory",
+        "file_system.File"
+      ],
+      "changed_tables_now": [
+        "file_system.Directory",
+        "file_system.File"
+      ],
+      "pre_match": true,
+      "post_match": true,
+      "changed_match": true,
+      "s": 22.6
+    },
+    {
+      "task_id": "396c5a2_2",
+      "pre_hash_recorded": "48bd8645370d66bf",
+      "pre_hash_now": "48bd8645370d66bf",
+      "post_hash_recorded": "48bd8645370d66bf",
+      "post_hash_now": "48bd8645370d66bf",
+      "changed_tables_recorded": [
+        "spotify.MusicPlayer"
+      ],
+      "changed_tables_now": [
+        "spotify.MusicPlayer"
+      ],
+      "pre_match": true,
+      "post_match": true,
+      "changed_match": true,
+      "s": 21.5
+    }
+  ]
+}

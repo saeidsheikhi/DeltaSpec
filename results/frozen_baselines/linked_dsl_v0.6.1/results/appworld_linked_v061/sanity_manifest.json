@@ -1,0 +1,37 @@
+{
+  "created_at": "2026-09-05T20:55:12.948776+00:00",
+  "git_commit": "not-a-git-repo",
+  "ollama_base_url": "http://100.76.170.53:11434",
+  "seed": 42,
+  "fail_closed": true,
+  "phase": "B_appworld_sanity",
+  "condition": "linked_v061_fresh",
+  "compiler_model": "qwen3.5:latest",
+  "compiler_prompt": "prompts/contract_compiler_appworld_v6_linked.md",
+  "repair_prompt": "prompts/contract_repair_appworld_v5_relational.md",
+  "compiler_prompt_sha256": "bee44f5dc0543087fc3b0c8edcbc007951d62b2f12f92568ecca67f48f0ce0bd",
+  "repair_prompt_sha256": "e8d3cddd9ca3a652897047b25534b116b3ed9a9918541feaa49acadf6434830d",
+  "prompt_archive": [
+    {
+      "path": "prompts/contract_compiler_appworld_v6_linked.md",
+      "sha256": "bee44f5dc0543087fc3b0c8edcbc007951d62b2f12f92568ecca67f48f0ce0bd",
+      "bytes": 8546,
+      "archived_to": "results/appworld_linked_v061/prompts/linked_v061_fresh.compiler.md"
+    },
+    {
+      "path": "prompts/contract_repair_appworld_v5_relational.md",
+      "sha256": "e8d3cddd9ca3a652897047b25534b116b3ed9a9918541feaa49acadf6434830d",
+      "bytes": 2449,
+      "archived_to": "results/appworld_linked_v061/prompts/linked_v061_fresh.repair.md"
+    }
+  ],
+  "dsl_version": "0.5",
+  "num_ctx": 16384,
+  "syntax_repair": false,
+  "field_aware": true,
+  "linker": true,
+  "vocab_grammar": true,
+  "field_rows_cap": 400,
+  "appworld_root": "/home/csipc/appworld-root",
+  "n_tasks": 13
+}

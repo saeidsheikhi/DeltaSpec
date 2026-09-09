@@ -1,0 +1,13 @@
+{
+  "Playlist_fks": {
+    "user_id": "spotify.User"
+  },
+  "UserArtistFollowing_fks": {
+    "user_id": "spotify.User",
+    "artist_id": "spotify.Artist"
+  },
+  "PlaylistSong_fks": {
+    "playlist_id": "spotify.Playlist",
+    "song_id": "spotify.Song"
+  }
+}

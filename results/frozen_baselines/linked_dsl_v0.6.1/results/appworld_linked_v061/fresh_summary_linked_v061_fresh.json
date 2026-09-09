@@ -1,0 +1,293 @@
+{
+  "per_task": {
+    "b119b1f_2": {
+      "usable": false,
+      "auto_accept": false,
+      "abstain": true,
+      "incorrect_block": false,
+      "agree": false,
+      "unsafe_promotion": false,
+      "official_state_pass": true,
+      "effect_located": false,
+      "compiled_status": "lint_error",
+      "status": "linker_empty",
+      "n_tx": 2,
+      "preds": "0\u21920",
+      "rules": [
+        "E.scope",
+        "F.empty:"
+      ],
+      "compile_s": 184,
+      "total_s": 221,
+      "abstain_reason": "no required effect survived linking"
+    },
+    "530b157_3": {
+      "usable": true,
+      "auto_accept": true,
+      "abstain": false,
+      "incorrect_block": false,
+      "agree": true,
+      "unsafe_promotion": false,
+      "official_state_pass": true,
+      "effect_located": true,
+      "compiled_status": "ok",
+      "status": "ok",
+      "n_tx": 2,
+      "preds": "5\u21924",
+      "rules": [
+        "D.effect",
+        "E.scope"
+      ],
+      "compile_s": 126,
+      "total_s": 165,
+      "abstain_reason": ""
+    },
+    "aa8502b_2": {
+      "usable": false,
+      "auto_accept": false,
+      "abstain": true,
+      "incorrect_block": false,
+      "agree": false,
+      "unsafe_promotion": false,
+      "official_state_pass": true,
+      "effect_located": false,
+      "compiled_status": "lint_error",
+      "status": "linker_empty",
+      "n_tx": 2,
+      "preds": "0\u21920",
+      "rules": [
+        "E.scope",
+        "F.empty:"
+      ],
+      "compile_s": 186,
+      "total_s": 222,
+      "abstain_reason": "no required effect survived linking"
+    },
+    "e3d6c94_3": {
+      "usable": false,
+      "auto_accept": false,
+      "abstain": true,
+      "incorrect_block": false,
+      "agree": false,
+      "unsafe_promotion": false,
+      "official_state_pass": true,
+      "effect_located": false,
+      "compiled_status": "lint_error",
+      "status": "linker_empty",
+      "n_tx": 2,
+      "preds": "0\u21920",
+      "rules": [
+        "E.scope",
+        "F.empty:"
+      ],
+      "compile_s": 193,
+      "total_s": 231,
+      "abstain_reason": "no required effect survived linking"
+    },
+    "34d9492_2": {
+      "usable": false,
+      "auto_accept": false,
+      "abstain": true,
+      "incorrect_block": false,
+      "agree": false,
+      "unsafe_promotion": false,
+      "official_state_pass": true,
+      "effect_located": false,
+      "compiled_status": "parse_error",
+      "status": "parse_error",
+      "n_tx": null,
+      "preds": "\u2013\u2192\u2013",
+      "rules": [],
+      "compile_s": 188,
+      "total_s": 259,
+      "abstain_reason": "JSONDecodeError: no JSON object found in model output: line 1 column 1 (char 0)"
+    },
+    "6c2c621_2": {
+      "usable": false,
+      "auto_accept": false,
+      "abstain": true,
+      "incorrect_block": false,
+      "agree": false,
+      "unsafe_promotion": false,
+      "official_state_pass": true,
+      "effect_located": false,
+      "compiled_status": "lint_error",
+      "status": "linker_empty",
+      "n_tx": 3,
+      "preds": "3\u21920",
+      "rules": [
+        "A.root",
+        "E.scope",
+        "F.empty:"
+      ],
+      "compile_s": 160,
+      "total_s": 199,
+      "abstain_reason": "no required effect survived linking"
+    },
+    "d4e9306_3": {
+      "usable": false,
+      "auto_accept": false,
+      "abstain": true,
+      "incorrect_block": false,
+      "agree": false,
+      "unsafe_promotion": false,
+      "official_state_pass": true,
+      "effect_located": false,
+      "compiled_status": "lint_error",
+      "status": "linker_empty",
+      "n_tx": 2,
+      "preds": "0\u21920",
+      "rules": [
+        "E.scope",
+        "F.empty:"
+      ],
+      "compile_s": 179,
+      "total_s": 216,
+      "abstain_reason": "no required effect survived linking"
+    },
+    "c901732_2": {
+      "usable": true,
+      "auto_accept": true,
+      "abstain": false,
+      "incorrect_block": false,
+      "agree": true,
+      "unsafe_promotion": false,
+      "official_state_pass": true,
+      "effect_located": true,
+      "compiled_status": "lint_error",
+      "status": "ok",
+      "n_tx": 1,
+      "preds": "4\u21924",
+      "rules": [
+        "A.root"
+      ],
+      "compile_s": 179,
+      "total_s": 216,
+      "abstain_reason": ""
+    },
+    "3c13f5a_1": {
+      "usable": false,
+      "auto_accept": false,
+      "abstain": true,
+      "incorrect_block": false,
+      "agree": false,
+      "unsafe_promotion": false,
+      "official_state_pass": true,
+      "effect_located": true,
+      "compiled_status": "lint_error",
+      "status": "linker_empty",
+      "n_tx": 6,
+      "preds": "3\u21920",
+      "rules": [
+        "A.root",
+        "C.vacuous",
+        "D.reject",
+        "E.scope",
+        "F.empty:"
+      ],
+      "compile_s": 167,
+      "total_s": 208,
+      "abstain_reason": "no required effect survived linking"
+    },
+    "57c3486_2": {
+      "usable": true,
+      "auto_accept": true,
+      "abstain": false,
+      "incorrect_block": false,
+      "agree": true,
+      "unsafe_promotion": false,
+      "official_state_pass": true,
+      "effect_located": true,
+      "compiled_status": "lint_error",
+      "status": "ok",
+      "n_tx": 5,
+      "preds": "4\u21924",
+      "rules": [
+        "A.cond",
+        "B.link",
+        "E.scope"
+      ],
+      "compile_s": 197,
+      "total_s": 234,
+      "abstain_reason": ""
+    },
+    "df61dc5_1": {
+      "usable": true,
+      "auto_accept": true,
+      "abstain": false,
+      "incorrect_block": false,
+      "agree": true,
+      "unsafe_promotion": false,
+      "official_state_pass": true,
+      "effect_located": true,
+      "compiled_status": "ok",
+      "status": "ok",
+      "n_tx": 1,
+      "preds": "3\u21923",
+      "rules": [
+        "E.scope"
+      ],
+      "compile_s": 148,
+      "total_s": 186,
+      "abstain_reason": ""
+    },
+    "68ee2c9_3": {
+      "usable": false,
+      "auto_accept": false,
+      "abstain": true,
+      "incorrect_block": false,
+      "agree": false,
+      "unsafe_promotion": false,
+      "official_state_pass": true,
+      "effect_located": false,
+      "compiled_status": "lint_error",
+      "status": "linker_empty",
+      "n_tx": 6,
+      "preds": "4\u21920",
+      "rules": [
+        "A.root",
+        "D.effect",
+        "D.reject",
+        "E.scope",
+        "F.empty:"
+      ],
+      "compile_s": 105,
+      "total_s": 144,
+      "abstain_reason": "no required effect survived linking"
+    },
+    "396c5a2_2": {
+      "usable": true,
+      "auto_accept": true,
+      "abstain": false,
+      "incorrect_block": false,
+      "agree": true,
+      "unsafe_promotion": false,
+      "official_state_pass": true,
+      "effect_located": true,
+      "compiled_status": "lint_error",
+      "status": "ok",
+      "n_tx": 2,
+      "preds": "4\u21923",
+      "rules": [
+        "A.root",
+        "D.reject"
+      ],
+      "compile_s": 205,
+      "total_s": 240,
+      "abstain_reason": ""
+    }
+  },
+  "aggregate": {
+    "usable": "5/13 = 0.38 [0.18,0.64]",
+    "auto_accept": "5/13 = 0.38 [0.18,0.64]",
+    "agree": "5/13 = 0.38 [0.18,0.64]",
+    "abstain": "8/13 = 0.62 [0.36,0.82]",
+    "incorrect_block": "0/13 = 0.00 [0.00,0.23]",
+    "unsafe_promotion": "0/13 = 0.00 [0.00,0.23]",
+    "effect_located": "6/13 = 0.46 [0.23,0.71]",
+    "precision_among_usable": "5/5 = 1.00",
+    "mean_compile_s": 171,
+    "mean_total_s": 211
+  },
+  "n": 13
+}

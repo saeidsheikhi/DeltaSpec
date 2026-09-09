@@ -1,0 +1,62 @@
+{
+  "all_stable": true,
+  "repeats": 2,
+  "tasks": [
+    {
+      "task_id": "b7a9ee9_1",
+      "repeats": 2,
+      "stable": {
+        "counts": true,
+        "records": true,
+        "delta": true,
+        "official_verdict": true
+      },
+      "delta": "{\"spotify.UserArtistFollowing\": {\"n_added\": 5, \"n_removed\": 0, \"n_updated\": 0}}",
+      "official_success": true,
+      "distinct_count_hashes": 1,
+      "distinct_record_hashes": 1
+    },
+    {
+      "task_id": "b0a8eae_1",
+      "repeats": 2,
+      "stable": {
+        "counts": true,
+        "records": true,
+        "delta": true,
+        "official_verdict": true
+      },
+      "delta": "{\"spotify.MusicPlayer\": {\"n_added\": 0, \"n_removed\": 0, \"n_updated\": 1}}",
+      "official_success": true,
+      "distinct_count_hashes": 1,
+      "distinct_record_hashes": 1
+    },
+    {
+      "task_id": "3ab5b8b_1",
+      "repeats": 2,
+      "stable": {
+        "counts": true,
+        "records": true,
+        "delta": true,
+        "official_verdict": true
+      },
+      "delta": "{\"spotify.UserDownloadedSong\": {\"n_added\": 16, \"n_removed\": 0, \"n_updated\": 0}}",
+      "official_success": false,
+      "distinct_count_hashes": 1,
+      "distinct_record_hashes": 1
+    },
+    {
+      "task_id": "cf6abd2_1",
+      "repeats": 2,
+      "stable": {
+        "counts": true,
+        "records": true,
+        "delta": true,
+        "official_verdict": true
+      },
+      "delta": "{\"simple_note.Note\": {\"n_added\": 0, \"n_removed\": 0, \"n_updated\": 1}}",
+      "official_success": true,
+      "distinct_count_hashes": 1,
+      "distinct_record_hashes": 1
+    }
+  ]
+}

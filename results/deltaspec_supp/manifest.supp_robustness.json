@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-09-06T09:26:46.674239+00:00",
+  "git_commit": "not-a-git-repo",
+  "ollama_base_url": "http://100.76.170.53:11434",
+  "seed": 42,
+  "fail_closed": true,
+  "phase": "deltaspec_supplementary",
+  "condition": "supp_robustness",
+  "labellers": [
+    "qwen3.5:latest",
+    "gemma3:27b",
+    "phi4:latest"
+  ],
+  "prompt": "prompts/deltaspec_intent_labeler_v1.md",
+  "frozen_system": "results/frozen_systems/deltaspec_v1_rof.json",
+  "recorded_from": "results/deltaspec_fresh/runs.jsonl",
+  "recorded_conditions": "deltaspec_fresh,deltaspec_fresh_retry_transport,deltaspec_fresh_rof",
+  "n_tasks": 27,
+  "n_skip": 2,
+  "num_ctx": 8192
+}

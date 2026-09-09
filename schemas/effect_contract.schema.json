@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EffectContract",
+  "type": "object",
+  "required": [
+    "contract_version",
+    "task_id",
+    "required",
+    "forbidden",
+    "invariants",
+    "alternatives",
+    "assumptions"
+  ],
+  "properties": {
+    "contract_version": {
+      "type": "string"
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "required": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/predicate"
+      }
+    },
+    "forbidden": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/predicate"
+      }
+    },
+    "invariants": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/predicate"
+      }
+    },
+    "alternatives": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "$ref": "#/$defs/predicate"
+        }
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "predicate": {
+      "type": "object",
+      "required": [
+        "kind",
+        "op",
+        "description",
+        "critical"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "state",
+            "delta",
+            "record",
+            "scope"
+          ]
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "op": {
+          "enum": [
+            "exists",
+            "absent",
+            "eq",
+            "ne",
+            "contains",
+            "not_contains",
+            "count_eq",
+            "count_ge",
+            "subset",
+            "set_eq",
+            "changed",
+            "unchanged",
+            "added_count_eq",
+            "removed_count_eq",
+            "updated_count_eq",
+            "added_count_ge",
+            "removed_count_ge",
+            "updated_count_ge",
+            "count_le",
+            "field_eq",
+            "field_ne",
+            "field_in",
+            "field_contains",
+            "field_changed",
+            "field_unchanged",
+            "field_transition",
+            "fields_unchanged_except",
+            "changed_tables_subset"
+          ]
+        },
+        "value": {},
+        "description": {
+          "type": "string"
+        },
+        "critical": {
+          "type": "boolean"
+        },
+        "table": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-z_]+\\.[A-Za-z_]+$|^$"
+        },
+        "where": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": true
+        },
+        "field": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

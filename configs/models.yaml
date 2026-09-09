@@ -1,0 +1,41 @@
+provider: ollama
+base_url_env: OLLAMA_BASE_URL
+default_compiler: Gemma3_27b
+
+models:
+  Gemma3_27b:
+    provider: ollama
+    model: gemma3:27b
+    roles: [compiler, repair, agent]
+    temperature: 0.0
+    top_p: 1.0
+    num_predict: 2048
+
+  Phi4_14b:
+    provider: ollama
+    model: phi4:latest
+    roles: [compiler, repair, agent]
+    temperature: 0.0
+    top_p: 1.0
+    num_predict: 2048
+
+  Mistral_7b:
+    provider: ollama
+    model: mistral:latest
+    roles: [compiler, agent, baseline_judge]
+    temperature: 0.0
+    top_p: 1.0
+    num_predict: 1536
+
+  DeepSeek_7b:
+    provider: ollama
+    model: deepseek-r1:7b
+    roles: [compiler, agent]
+    temperature: 0.0
+    top_p: 1.0
+    num_predict: 2048
+
+openrouter:
+  enabled_env: OPENROUTER_ENABLED
+  model_env: OPENROUTER_MODEL
+  note: "Optional frontier comparator only; keep disabled for main runs."

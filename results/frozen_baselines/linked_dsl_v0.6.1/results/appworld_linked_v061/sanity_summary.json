@@ -1,0 +1,20 @@
+{
+  "n_tasks": 13,
+  "n_completed": 13,
+  "n_contracts_compiled": 5,
+  "n_reference_runs_official_state_pass": 13,
+  "official_verdict_cross_checks": {
+    "matched": 13,
+    "mismatched": 0,
+    "unavailable": 0
+  },
+  "agreement_counts": {
+    "agree": 5,
+    "effectgate_stricter": 0,
+    "effectgate_looser": 0
+  },
+  "n_agree": 5,
+  "mean_compile_s": 170.96944129690527,
+  "mean_reference_s": 23.201162371175506,
+  "errors": []
+}

@@ -1,0 +1,164 @@
+{
+  "per_task": {
+    "b7a9ee9_1": {
+      "usable": false,
+      "auto_accept": false,
+      "abstain": true,
+      "incorrect_block": false,
+      "agree": false,
+      "unsafe_promotion": false,
+      "official_state_pass": true,
+      "effect_located": false,
+      "compiled_status": "provider_error",
+      "status": "provider_error",
+      "n_tx": null,
+      "preds": "\u2013\u2192\u2013",
+      "rules": [],
+      "compile_s": 900,
+      "total_s": 938,
+      "abstain_reason": "ConnectionError: HTTPConnectionPool(host='100.76.170.53', port=11434): Max retries exceede"
+    },
+    "b0a8eae_1": {
+      "usable": true,
+      "auto_accept": true,
+      "abstain": false,
+      "incorrect_block": false,
+      "agree": true,
+      "unsafe_promotion": false,
+      "official_state_pass": true,
+      "effect_located": true,
+      "compiled_status": "ok",
+      "status": "ok",
+      "n_tx": 2,
+      "preds": "4\u21924",
+      "rules": [
+        "A.owner"
+      ],
+      "compile_s": 258,
+      "total_s": 303,
+      "abstain_reason": ""
+    },
+    "cf6abd2_1": {
+      "usable": false,
+      "auto_accept": false,
+      "abstain": true,
+      "incorrect_block": false,
+      "agree": false,
+      "unsafe_promotion": false,
+      "official_state_pass": true,
+      "effect_located": true,
+      "compiled_status": "ok",
+      "status": "linker_empty",
+      "n_tx": 2,
+      "preds": "3\u21920",
+      "rules": [
+        "D.reject",
+        "F.empty:"
+      ],
+      "compile_s": 139,
+      "total_s": 190,
+      "abstain_reason": "no required effect survived linking"
+    },
+    "4fab96f_1": {
+      "usable": false,
+      "auto_accept": false,
+      "abstain": true,
+      "incorrect_block": false,
+      "agree": false,
+      "unsafe_promotion": false,
+      "official_state_pass": true,
+      "effect_located": false,
+      "compiled_status": "lint_error",
+      "status": "linker_empty",
+      "n_tx": 2,
+      "preds": "0\u21920",
+      "rules": [
+        "E.scope",
+        "F.empty:"
+      ],
+      "compile_s": 147,
+      "total_s": 199,
+      "abstain_reason": "no required effect survived linking"
+    },
+    "ccb4494_1": {
+      "usable": true,
+      "auto_accept": true,
+      "abstain": false,
+      "incorrect_block": false,
+      "agree": true,
+      "unsafe_promotion": false,
+      "official_state_pass": true,
+      "effect_located": true,
+      "compiled_status": "ok",
+      "status": "ok",
+      "n_tx": 1,
+      "preds": "4\u21924",
+      "rules": [
+        "E.scope"
+      ],
+      "compile_s": 191,
+      "total_s": 243,
+      "abstain_reason": ""
+    },
+    "692c77d_1": {
+      "usable": false,
+      "auto_accept": false,
+      "abstain": true,
+      "incorrect_block": false,
+      "agree": false,
+      "unsafe_promotion": false,
+      "official_state_pass": true,
+      "effect_located": true,
+      "compiled_status": "ok",
+      "status": "linker_empty",
+      "n_tx": 4,
+      "preds": "4\u21920",
+      "rules": [
+        "A.owner",
+        "B.vacuous_required",
+        "E.scope",
+        "F.empty:"
+      ],
+      "compile_s": 191,
+      "total_s": 244,
+      "abstain_reason": "no required effect survived linking; the only required effect(s) had a vacuous lower bound"
+    },
+    "229360a_1": {
+      "usable": false,
+      "auto_accept": false,
+      "abstain": true,
+      "incorrect_block": false,
+      "agree": false,
+      "unsafe_promotion": false,
+      "official_state_pass": true,
+      "effect_located": true,
+      "compiled_status": "lint_error",
+      "status": "linker_empty",
+      "n_tx": 7,
+      "preds": "6\u21920",
+      "rules": [
+        "A.root",
+        "B.vacuous_required",
+        "D.reject",
+        "E.scope",
+        "F.empty:"
+      ],
+      "compile_s": 189,
+      "total_s": 243,
+      "abstain_reason": "no required effect survived linking; the only required effect(s) had a vacuous lower bound"
+    }
+  },
+  "aggregate": {
+    "usable": "2/7 = 0.29 [0.08,0.64]",
+    "auto_accept": "2/7 = 0.29 [0.08,0.64]",
+    "agree": "2/7 = 0.29 [0.08,0.64]",
+    "abstain": "5/7 = 0.71 [0.36,0.92]",
+    "incorrect_block": "0/7 = 0.00 [0.00,0.35]",
+    "unsafe_promotion": "0/7 = 0.00 [0.00,0.35]",
+    "effect_located": "5/7 = 0.71 [0.36,0.92]",
+    "precision_among_usable": "2/2 = 1.00",
+    "mean_compile_s": 288,
+    "mean_total_s": 337
+  },
+  "n": 7
+}

@@ -1,0 +1,122 @@
+{
+ "n": 27,
+ "aggregate": {
+  "abl_all_req": {
+   "tasks": 27,
+   "auto": 27,
+   "neg": 105,
+   "pos": 57,
+   "unsafe": 0,
+   "fb": 4,
+   "sk": 121,
+   "st": 135,
+   "same": 0,
+   "label_s": 0,
+   "same_verdicts": 24
+  },
+  "abl_no_exact": {
+   "tasks": 27,
+   "auto": 27,
+   "neg": 105,
+   "pos": 57,
+   "unsafe": 41,
+   "fb": 0,
+   "sk": 114,
+   "st": 135,
+   "same": 0,
+   "label_s": 0,
+   "same_verdicts": 10
+  },
+  "abl_no_prohib": {
+   "tasks": 27,
+   "auto": 27,
+   "neg": 105,
+   "pos": 57,
+   "unsafe": 6,
+   "fb": 1,
+   "sk": 115,
+   "st": 135,
+   "same": 0,
+   "label_s": 0,
+   "same_verdicts": 27
+  },
+  "abl_no_scope": {
+   "tasks": 27,
+   "auto": 27,
+   "neg": 105,
+   "pos": 57,
+   "unsafe": 6,
+   "fb": 1,
+   "sk": 61,
+   "st": 135,
+   "same": 0,
+   "label_s": 0,
+   "same_verdicts": 27
+  },
+  "abl_tables": {
+   "tasks": 27,
+   "auto": 27,
+   "neg": 105,
+   "pos": 57,
+   "unsafe": 41,
+   "fb": 0,
+   "sk": 107,
+   "st": 135,
+   "same": 0,
+   "label_s": 0,
+   "same_verdicts": 10
+  },
+  "relabel:gemma3:27b": {
+   "tasks": 27,
+   "auto": 27,
+   "neg": 105,
+   "pos": 57,
+   "unsafe": 3,
+   "fb": 4,
+   "sk": 118,
+   "st": 135,
+   "same": 9,
+   "label_s": 2936.9372160760686,
+   "same_verdicts": 22
+  },
+  "relabel:phi4:latest": {
+   "tasks": 27,
+   "auto": 27,
+   "neg": 105,
+   "pos": 57,
+   "unsafe": 1,
+   "fb": 4,
+   "sk": 120,
+   "st": 135,
+   "same": 7,
+   "label_s": 1799.8089492619038,
+   "same_verdicts": 23
+  },
+  "relabel:qwen3.5:latest": {
+   "tasks": 27,
+   "auto": 27,
+   "neg": 105,
+   "pos": 57,
+   "unsafe": 6,
+   "fb": 1,
+   "sk": 115,
+   "st": 135,
+   "same": 21,
+   "label_s": 795.032792262733,
+   "same_verdicts": 27
+  },
+  "v1_recorded": {
+   "tasks": 27,
+   "auto": 27,
+   "neg": 105,
+   "pos": 57,
+   "unsafe": 6,
+   "fb": 1,
+   "sk": 115,
+   "st": 135,
+   "same": 0,
+   "label_s": 0,
+   "same_verdicts": 27
+  }
+ }
+}

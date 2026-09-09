@@ -1,0 +1,39 @@
+{
+  "n": 7,
+  "aggregate": {
+    "usable": 7,
+    "auto_accept": 7,
+    "abstain": 0,
+    "incorrect_block": 0,
+    "invalid_ref": 0,
+    "unsafe_promotions": 0,
+    "neg_variants": 26,
+    "killed_variants": 26,
+    "false_block_variants": 1,
+    "pos_variants": 16,
+    "alt_extra_read": [
+      7,
+      7
+    ],
+    "alt_dup": [
+      6,
+      7
+    ],
+    "synth_killed": 26,
+    "synth_total": 27,
+    "hash_unsafe": 0,
+    "hash_false_block": 1,
+    "out_unsafe": 26,
+    "out_false_block": 0,
+    "oneshot_tasks": 2,
+    "oneshot_accepts_ref": 2,
+    "oneshot_unsafe": 2,
+    "oneshot_neg": 7,
+    "oneshot_false_block": 0,
+    "oneshot_pos": 5,
+    "facts": 50,
+    "required": 33,
+    "total_s": 1693.1627486194484,
+    "label_s": 129.65295442612842
+  }
+}

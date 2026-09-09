@@ -1,0 +1,1427 @@
+{
+  "candidate_version": "skip_restart",
+  "environment": "dogfood-staging",
+  "decision": "BLOCK",
+  "reasons": [
+    "df_worker_concurrency: effect-contract violation - required:/worker/started_with/worker_concurrency eq",
+    "df_log_level_back_to_info: effect-contract violation - required:/worker/started_with/log_level eq",
+    "df_concurrency_back_to_two: effect-contract violation - required:/worker/started_with/worker_concurrency eq"
+  ],
+  "summary": {
+    "n_tasks": 25,
+    "n_failed": 3,
+    "n_passed": 22
+  },
+  "task_results": [
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_enable_feature_x",
+      "family": "config",
+      "pre_state_hash": "03417e1118253411",
+      "post_state_hash": "96e32a1daae2fcaa",
+      "contract_hash": "8c716caf2369c817",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "set_config_key",
+          "args": {
+            "key": "feature_x",
+            "value": true
+          },
+          "ok": true,
+          "result": {
+            "key": "feature_x",
+            "value": true
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/config/feature_x",
+          "before": false,
+          "after": true,
+          "kind": "modified"
+        },
+        {
+          "path": "/health/feature_x",
+          "before": false,
+          "after": true,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_worker_concurrency",
+      "family": "config",
+      "pre_state_hash": "03417e1118253411",
+      "post_state_hash": "c9023f07e9a23f21",
+      "contract_hash": "85f389a0651e025f",
+      "passed": false,
+      "status": "fail",
+      "critical_violation": true,
+      "violations": [
+        {
+          "group": "required",
+          "predicate": {
+            "kind": "state",
+            "path": "/worker/started_with/worker_concurrency",
+            "op": "eq",
+            "value": 4,
+            "description": "the running worker actually uses the new concurrency",
+            "critical": true
+          },
+          "raw": false,
+          "satisfied": false,
+          "error": null
+        }
+      ],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "set_config_key",
+          "args": {
+            "key": "worker_concurrency",
+            "value": 4
+          },
+          "ok": true,
+          "result": {
+            "key": "worker_concurrency",
+            "value": 4
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/config/worker_concurrency",
+          "before": 2,
+          "after": 4,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_log_level_debug",
+      "family": "config",
+      "pre_state_hash": "6b6db86b9d3dd2f3",
+      "post_state_hash": "03417e1118253411",
+      "contract_hash": "6f1f3cd3da24601f",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "set_config_key",
+          "args": {
+            "key": "log_level",
+            "value": "debug"
+          },
+          "ok": true,
+          "result": {
+            "key": "log_level",
+            "value": "debug"
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/config/log_level",
+          "before": "info",
+          "after": "debug",
+          "kind": "modified"
+        },
+        {
+          "path": "/health/log_level",
+          "before": "info",
+          "after": "debug",
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_deploy_v2",
+      "family": "deploy",
+      "pre_state_hash": "6b26121ce4bdbf34",
+      "post_state_hash": "c816e196837394d5",
+      "contract_hash": "c073f243a3224193",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "deploy_version",
+          "args": {
+            "tag": "v2"
+          },
+          "ok": true,
+          "result": {
+            "version": "v2",
+            "git": {
+              "initialised": true,
+              "head": "14e5799",
+              "dirty": false,
+              "commits": 3
+            }
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/config/version",
+          "before": "v1",
+          "after": "v2",
+          "kind": "modified"
+        },
+        {
+          "path": "/git/commits",
+          "before": 2,
+          "after": 3,
+          "kind": "modified"
+        },
+        {
+          "path": "/git/head",
+          "before": "92f7475",
+          "after": "14e5799",
+          "kind": "modified"
+        },
+        {
+          "path": "/health/version",
+          "before": "v1",
+          "after": "v2",
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_rollback_to_v1",
+      "family": "deploy",
+      "pre_state_hash": "68478e5f5f02777f",
+      "post_state_hash": "41e0e8ebbafbc1a9",
+      "contract_hash": "4b8d69eb4c4e9fb1",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "deploy_version",
+          "args": {
+            "tag": "v1"
+          },
+          "ok": true,
+          "result": {
+            "version": "v1",
+            "git": {
+              "initialised": true,
+              "head": "02ceb8e",
+              "dirty": false,
+              "commits": 3
+            }
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/config/version",
+          "before": "v2",
+          "after": "v1",
+          "kind": "modified"
+        },
+        {
+          "path": "/git/commits",
+          "before": 2,
+          "after": 3,
+          "kind": "modified"
+        },
+        {
+          "path": "/git/head",
+          "before": "dcb15f9",
+          "after": "02ceb8e",
+          "kind": "modified"
+        },
+        {
+          "path": "/health/version",
+          "before": "v2",
+          "after": "v1",
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_backup_then_update_record",
+      "family": "data",
+      "pre_state_hash": "03417e1118253411",
+      "post_state_hash": "8152ef34676c9332",
+      "contract_hash": "4839cfe9e4dd19b3",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "create_backup",
+          "args": {
+            "name": "pre-tier-change"
+          },
+          "ok": true,
+          "result": {
+            "backup": "pre-tier-change",
+            "files": [
+              "app.sqlite3",
+              "config.json"
+            ]
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "db_update",
+          "args": {
+            "table": "customers",
+            "row_id": "c1",
+            "field": "tier",
+            "value": "pro"
+          },
+          "ok": true,
+          "result": {
+            "table": "customers",
+            "row_id": "c1",
+            "field": "tier",
+            "value": "pro"
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/backups",
+          "before": [],
+          "after": [
+            "pre-tier-change"
+          ],
+          "kind": "modified"
+        },
+        {
+          "path": "/db/customers/c1/tier",
+          "before": "basic",
+          "after": "pro",
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_mark_invoice_paid",
+      "family": "data",
+      "pre_state_hash": "03417e1118253411",
+      "post_state_hash": "b736846898d9939a",
+      "contract_hash": "e9fc1f9e41d8a0ef",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "create_backup",
+          "args": {
+            "name": "pre-invoice"
+          },
+          "ok": true,
+          "result": {
+            "backup": "pre-invoice",
+            "files": [
+              "app.sqlite3",
+              "config.json"
+            ]
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "db_update",
+          "args": {
+            "table": "invoices",
+            "row_id": "i114",
+            "field": "status",
+            "value": "paid"
+          },
+          "ok": true,
+          "result": {
+            "table": "invoices",
+            "row_id": "i114",
+            "field": "status",
+            "value": "paid"
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/backups",
+          "before": [],
+          "after": [
+            "pre-invoice"
+          ],
+          "kind": "modified"
+        },
+        {
+          "path": "/db/invoices/i114/status",
+          "before": "unpaid",
+          "after": "paid",
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_restore_backup",
+      "family": "data",
+      "pre_state_hash": "3c3df46f390ac47c",
+      "post_state_hash": "22084bc28ee3ca2b",
+      "contract_hash": "edec332889f3271b",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "restore_backup",
+          "args": {
+            "name": "known-good"
+          },
+          "ok": true,
+          "result": {
+            "restored": "known-good"
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/db/customers/c1/tier",
+          "before": "enterprise",
+          "after": "basic",
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_deactivate_customer",
+      "family": "data",
+      "pre_state_hash": "03417e1118253411",
+      "post_state_hash": "19c9b3252d8f15b2",
+      "contract_hash": "f827b6ce2b9a2c65",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "create_backup",
+          "args": {
+            "name": "pre-deactivate"
+          },
+          "ok": true,
+          "result": {
+            "backup": "pre-deactivate",
+            "files": [
+              "app.sqlite3",
+              "config.json"
+            ]
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "db_update",
+          "args": {
+            "table": "customers",
+            "row_id": "c2",
+            "field": "active",
+            "value": 0
+          },
+          "ok": true,
+          "result": {
+            "table": "customers",
+            "row_id": "c2",
+            "field": "active",
+            "value": 0
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/backups",
+          "before": [],
+          "after": [
+            "pre-deactivate"
+          ],
+          "kind": "modified"
+        },
+        {
+          "path": "/db/customers/c2/active",
+          "before": 1,
+          "after": 0,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_rotate_token",
+      "family": "secrets",
+      "pre_state_hash": "03417e1118253411",
+      "post_state_hash": "e89c3280351c8788",
+      "contract_hash": "9d602df6a6716f04",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "rotate_token",
+          "args": {},
+          "ok": true,
+          "result": {
+            "rotated": true
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/config/synthetic_token",
+          "before": "SYNTHETIC_TOKEN_V1",
+          "after": "SYNTHETIC_TOKEN_V2",
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_restart_web_only",
+      "family": "ops",
+      "pre_state_hash": "03417e1118253411",
+      "post_state_hash": "03417e1118253411",
+      "contract_hash": "b436ef6fa77c8bd5",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [],
+      "effect_diff": [],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_commit_deployed_config",
+      "family": "deploy",
+      "pre_state_hash": "03417e1118253411",
+      "post_state_hash": "a8afae64ed6fff2d",
+      "contract_hash": "1bc3f29f860b388c",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "git_commit",
+          "args": {
+            "message": "sync staging config"
+          },
+          "ok": true,
+          "result": {
+            "initialised": true,
+            "head": "bcf7d1d",
+            "dirty": false,
+            "commits": 2
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/git/commits",
+          "before": 1,
+          "after": 2,
+          "kind": "modified"
+        },
+        {
+          "path": "/git/head",
+          "before": "2744a30",
+          "after": "bcf7d1d",
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_disable_feature_x",
+      "family": "config",
+      "pre_state_hash": "96e32a1daae2fcaa",
+      "post_state_hash": "03417e1118253411",
+      "contract_hash": "1b4c0699c25f5cf2",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "set_config_key",
+          "args": {
+            "key": "feature_x",
+            "value": false
+          },
+          "ok": true,
+          "result": {
+            "key": "feature_x",
+            "value": false
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/config/feature_x",
+          "before": true,
+          "after": false,
+          "kind": "modified"
+        },
+        {
+          "path": "/health/feature_x",
+          "before": true,
+          "after": false,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_log_level_back_to_info",
+      "family": "config",
+      "pre_state_hash": "03417e1118253411",
+      "post_state_hash": "6b6db86b9d3dd2f3",
+      "contract_hash": "517dba717e4a5712",
+      "passed": false,
+      "status": "fail",
+      "critical_violation": true,
+      "violations": [
+        {
+          "group": "required",
+          "predicate": {
+            "kind": "state",
+            "path": "/worker/started_with/log_level",
+            "op": "eq",
+            "value": "info",
+            "description": "the running worker is off debug",
+            "critical": true
+          },
+          "raw": false,
+          "satisfied": false,
+          "error": null
+        }
+      ],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "set_config_key",
+          "args": {
+            "key": "log_level",
+            "value": "info"
+          },
+          "ok": true,
+          "result": {
+            "key": "log_level",
+            "value": "info"
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/config/log_level",
+          "before": "debug",
+          "after": "info",
+          "kind": "modified"
+        },
+        {
+          "path": "/health/log_level",
+          "before": "debug",
+          "after": "info",
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_concurrency_back_to_two",
+      "family": "config",
+      "pre_state_hash": "1097e0ac7984c5ce",
+      "post_state_hash": "89445b277bbac318",
+      "contract_hash": "567603877f7b19fe",
+      "passed": false,
+      "status": "fail",
+      "critical_violation": true,
+      "violations": [
+        {
+          "group": "required",
+          "predicate": {
+            "kind": "state",
+            "path": "/worker/started_with/worker_concurrency",
+            "op": "eq",
+            "value": 2,
+            "description": "the running worker uses the new value",
+            "critical": true
+          },
+          "raw": false,
+          "satisfied": false,
+          "error": null
+        }
+      ],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "set_config_key",
+          "args": {
+            "key": "worker_concurrency",
+            "value": 2
+          },
+          "ok": true,
+          "result": {
+            "key": "worker_concurrency",
+            "value": 2
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/config/worker_concurrency",
+          "before": 4,
+          "after": 2,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_deploy_v3_with_backup",
+      "family": "deploy",
+      "pre_state_hash": "e6bd220c656cb605",
+      "post_state_hash": "17af90851750a4f0",
+      "contract_hash": "f76353656af53282",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "create_backup",
+          "args": {
+            "name": "pre-v3"
+          },
+          "ok": true,
+          "result": {
+            "backup": "pre-v3",
+            "files": [
+              "app.sqlite3",
+              "config.json"
+            ]
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "deploy_version",
+          "args": {
+            "tag": "v3"
+          },
+          "ok": true,
+          "result": {
+            "version": "v3",
+            "git": {
+              "initialised": true,
+              "head": "4ac21b7",
+              "dirty": false,
+              "commits": 3
+            }
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/backups",
+          "before": [],
+          "after": [
+            "pre-v3"
+          ],
+          "kind": "modified"
+        },
+        {
+          "path": "/config/version",
+          "before": "v2",
+          "after": "v3",
+          "kind": "modified"
+        },
+        {
+          "path": "/git/commits",
+          "before": 2,
+          "after": 3,
+          "kind": "modified"
+        },
+        {
+          "path": "/git/head",
+          "before": "d9c4392",
+          "after": "4ac21b7",
+          "kind": "modified"
+        },
+        {
+          "path": "/health/version",
+          "before": "v2",
+          "after": "v3",
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_revert_deploy_commit",
+      "family": "deploy",
+      "pre_state_hash": "ba88e3a11ef97cf6",
+      "post_state_hash": "9004cbcd4fbef900",
+      "contract_hash": "1666a967a9f6eea5",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "git_revert",
+          "args": {},
+          "ok": true,
+          "result": {
+            "before": {
+              "initialised": true,
+              "head": "7dd0a7f",
+              "dirty": false,
+              "commits": 2
+            },
+            "after": {
+              "initialised": true,
+              "head": "2744a30",
+              "dirty": false,
+              "commits": 1
+            }
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/git/commits",
+          "before": 2,
+          "after": 1,
+          "kind": "modified"
+        },
+        {
+          "path": "/git/head",
+          "before": "7dd0a7f",
+          "after": "2744a30",
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_downgrade_customer",
+      "family": "data",
+      "pre_state_hash": "03417e1118253411",
+      "post_state_hash": "0b37ba8cd6e8f3ed",
+      "contract_hash": "03824d5644a9d5c7",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "create_backup",
+          "args": {
+            "name": "pre-downgrade"
+          },
+          "ok": true,
+          "result": {
+            "backup": "pre-downgrade",
+            "files": [
+              "app.sqlite3",
+              "config.json"
+            ]
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "db_update",
+          "args": {
+            "table": "customers",
+            "row_id": "c2",
+            "field": "tier",
+            "value": "basic"
+          },
+          "ok": true,
+          "result": {
+            "table": "customers",
+            "row_id": "c2",
+            "field": "tier",
+            "value": "basic"
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/backups",
+          "before": [],
+          "after": [
+            "pre-downgrade"
+          ],
+          "kind": "modified"
+        },
+        {
+          "path": "/db/customers/c2/tier",
+          "before": "pro",
+          "after": "basic",
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_reopen_invoice",
+      "family": "data",
+      "pre_state_hash": "03417e1118253411",
+      "post_state_hash": "b0e9d109ee42bfa6",
+      "contract_hash": "4ca861884342ee74",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "create_backup",
+          "args": {
+            "name": "pre-reopen"
+          },
+          "ok": true,
+          "result": {
+            "backup": "pre-reopen",
+            "files": [
+              "app.sqlite3",
+              "config.json"
+            ]
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "db_update",
+          "args": {
+            "table": "invoices",
+            "row_id": "i115",
+            "field": "status",
+            "value": "unpaid"
+          },
+          "ok": true,
+          "result": {
+            "table": "invoices",
+            "row_id": "i115",
+            "field": "status",
+            "value": "unpaid"
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/backups",
+          "before": [],
+          "after": [
+            "pre-reopen"
+          ],
+          "kind": "modified"
+        },
+        {
+          "path": "/db/invoices/i115/status",
+          "before": "paid",
+          "after": "unpaid",
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_reactivate_customer",
+      "family": "data",
+      "pre_state_hash": "4ef99b10ad3a0e06",
+      "post_state_hash": "ab5355c188e43763",
+      "contract_hash": "1529ca61223b511d",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "create_backup",
+          "args": {
+            "name": "pre-reactivate"
+          },
+          "ok": true,
+          "result": {
+            "backup": "pre-reactivate",
+            "files": [
+              "app.sqlite3",
+              "config.json"
+            ]
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "db_update",
+          "args": {
+            "table": "customers",
+            "row_id": "c1",
+            "field": "active",
+            "value": 1
+          },
+          "ok": true,
+          "result": {
+            "table": "customers",
+            "row_id": "c1",
+            "field": "active",
+            "value": 1
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/backups",
+          "before": [],
+          "after": [
+            "pre-reactivate"
+          ],
+          "kind": "modified"
+        },
+        {
+          "path": "/db/customers/c1/active",
+          "before": 0,
+          "after": 1,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_two_backups_then_change",
+      "family": "data",
+      "pre_state_hash": "03417e1118253411",
+      "post_state_hash": "13aa7bfa4d8a7f2b",
+      "contract_hash": "b6626473e4d6f9d7",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "create_backup",
+          "args": {
+            "name": "daily"
+          },
+          "ok": true,
+          "result": {
+            "backup": "daily",
+            "files": [
+              "app.sqlite3",
+              "config.json"
+            ]
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "create_backup",
+          "args": {
+            "name": "pre-change"
+          },
+          "ok": true,
+          "result": {
+            "backup": "pre-change",
+            "files": [
+              "app.sqlite3",
+              "config.json"
+            ]
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "db_update",
+          "args": {
+            "table": "customers",
+            "row_id": "c1",
+            "field": "tier",
+            "value": "pro"
+          },
+          "ok": true,
+          "result": {
+            "table": "customers",
+            "row_id": "c1",
+            "field": "tier",
+            "value": "pro"
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/backups",
+          "before": [],
+          "after": [
+            "daily",
+            "pre-change"
+          ],
+          "kind": "modified"
+        },
+        {
+          "path": "/db/customers/c1/tier",
+          "before": "basic",
+          "after": "pro",
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_restart_worker_only",
+      "family": "ops",
+      "pre_state_hash": "03417e1118253411",
+      "post_state_hash": "03417e1118253411",
+      "contract_hash": "df0aa166d8d24525",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [],
+      "effect_diff": [],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_health_check_only",
+      "family": "ops",
+      "pre_state_hash": "03417e1118253411",
+      "post_state_hash": "03417e1118253411",
+      "contract_hash": "af079a57fc39f63e",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "get_health",
+          "args": {},
+          "ok": true,
+          "result": {
+            "reachable": true,
+            "status": 200,
+            "ok": true,
+            "version": "v1",
+            "feature_x": false,
+            "log_level": "debug"
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "read_config",
+          "args": {},
+          "ok": true,
+          "result": {
+            "version": "v1",
+            "feature_x": false,
+            "worker_concurrency": 2,
+            "log_level": "debug",
+            "synthetic_token": "SYNTHETIC_TOKEN_V1"
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "list_backups",
+          "args": {},
+          "ok": true,
+          "result": [],
+          "error": null
+        }
+      ],
+      "effect_diff": [],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_rotate_token_and_commit",
+      "family": "secrets",
+      "pre_state_hash": "03417e1118253411",
+      "post_state_hash": "dcb5dc1062874700",
+      "contract_hash": "9f52b6c23d218148",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "rotate_token",
+          "args": {},
+          "ok": true,
+          "result": {
+            "rotated": true
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "git_commit",
+          "args": {
+            "message": "rotate token"
+          },
+          "ok": true,
+          "result": {
+            "initialised": true,
+            "head": "d833910",
+            "dirty": false,
+            "commits": 2
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/config/synthetic_token",
+          "before": "SYNTHETIC_TOKEN_V1",
+          "after": "SYNTHETIC_TOKEN_V2",
+          "kind": "modified"
+        },
+        {
+          "path": "/git/commits",
+          "before": 1,
+          "after": 2,
+          "kind": "modified"
+        },
+        {
+          "path": "/git/head",
+          "before": "2744a30",
+          "after": "d833910",
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "skip_restart",
+      "task_id": "df_backup_before_deploy_and_rollback",
+      "family": "deploy",
+      "pre_state_hash": "a5a24c19109bbbf8",
+      "post_state_hash": "d01da34441953bea",
+      "contract_hash": "148e8c4a9b6b0162",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "create_backup",
+          "args": {
+            "name": "pre-risky"
+          },
+          "ok": true,
+          "result": {
+            "backup": "pre-risky",
+            "files": [
+              "app.sqlite3",
+              "config.json"
+            ]
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "deploy_version",
+          "args": {
+            "tag": "v4"
+          },
+          "ok": true,
+          "result": {
+            "version": "v4",
+            "git": {
+              "initialised": true,
+              "head": "cdd0e60",
+              "dirty": false,
+              "commits": 3
+            }
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "deploy_version",
+          "args": {
+            "tag": "v1"
+          },
+          "ok": true,
+          "result": {
+            "version": "v1",
+            "git": {
+              "initialised": true,
+              "head": "d6239d0",
+              "dirty": false,
+              "commits": 4
+            }
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/backups",
+          "before": [],
+          "after": [
+            "pre-risky"
+          ],
+          "kind": "modified"
+        },
+        {
+          "path": "/git/commits",
+          "before": 2,
+          "after": 4,
+          "kind": "modified"
+        },
+        {
+          "path": "/git/head",
+          "before": "9ea7f67",
+          "after": "d6239d0",
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    }
+  ],
+  "created_at": "2026-08-12T03:10:55Z",
+  "git_commit": "not-a-git-repo"
+}

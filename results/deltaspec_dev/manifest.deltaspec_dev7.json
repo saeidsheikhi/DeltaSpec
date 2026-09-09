@@ -1,0 +1,14 @@
+{
+  "created_at": "2026-09-05T23:54:05.984280+00:00",
+  "git_commit": "not-a-git-repo",
+  "ollama_base_url": "http://100.76.170.53:11434",
+  "seed": 42,
+  "fail_closed": true,
+  "phase": "deltaspec",
+  "condition": "deltaspec_dev7",
+  "model": "qwen3.5:latest",
+  "prompt": "prompts/deltaspec_intent_labeler_v1.md",
+  "prompt_sha256": "f13eee4c146a48080b756e42f985933abfb2cf73634c191b6e80bfacffeb396f",
+  "n_skip": 2,
+  "num_ctx": 8192
+}

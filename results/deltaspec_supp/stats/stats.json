@@ -1,0 +1,1256 @@
+{
+  "primary": {
+    "per_scenario": {
+      "07b42fd": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 3,
+        "unsafe": 0,
+        "pos": 3,
+        "fb": 0
+      },
+      "0d8a4ee": {
+        "tier": "A",
+        "tasks": 3,
+        "evaluable": 0,
+        "auto": 0,
+        "neg": 0,
+        "unsafe": 0,
+        "pos": 0,
+        "fb": 0
+      },
+      "229360a": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 0
+      },
+      "22cc237": {
+        "tier": "A",
+        "tasks": 3,
+        "evaluable": 3,
+        "auto": 2,
+        "neg": 8,
+        "unsafe": 4,
+        "pos": 4,
+        "fb": 0
+      },
+      "29caf6f": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 0
+      },
+      "37a8675": {
+        "tier": "A",
+        "tasks": 2,
+        "evaluable": 0,
+        "auto": 0,
+        "neg": 0,
+        "unsafe": 0,
+        "pos": 0,
+        "fb": 0
+      },
+      "3c13f5a": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 1
+      },
+      "530b157": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 5,
+        "unsafe": 0,
+        "pos": 1,
+        "fb": 0
+      },
+      "60d0b5b": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 3,
+        "unsafe": 0,
+        "pos": 3,
+        "fb": 0
+      },
+      "6c2c621": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 0
+      },
+      "7d7fbf6": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 5,
+        "unsafe": 0,
+        "pos": 1,
+        "fb": 0
+      },
+      "aa8502b": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 0
+      },
+      "afc0fce": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 0
+      },
+      "b119b1f": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 2,
+        "unsafe": 0,
+        "pos": 4,
+        "fb": 0
+      },
+      "c901732": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 3,
+        "unsafe": 0,
+        "pos": 3,
+        "fb": 0
+      },
+      "ccb4494": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 0
+      },
+      "ce359b5": {
+        "tier": "A",
+        "tasks": 3,
+        "evaluable": 3,
+        "auto": 3,
+        "neg": 12,
+        "unsafe": 0,
+        "pos": 6,
+        "fb": 0
+      },
+      "cf6abd2": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 3,
+        "unsafe": 0,
+        "pos": 3,
+        "fb": 0
+      },
+      "d4e9306": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 0
+      },
+      "e3d6c94": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 0
+      }
+    },
+    "comparisons": {
+      "deltaspec_vs_output_equal_by_task": {
+        "method_a": "deltaspec",
+        "method_b": "output_equal",
+        "outcome": "correct",
+        "n_cases": 126,
+        "rate_a": {
+          "k": 121,
+          "n": 126,
+          "p": 0.9603174603174603,
+          "ci95": [
+            0.9104643457790981,
+            0.9829328869198303
+          ]
+        },
+        "rate_b": {
+          "k": 49,
+          "n": 126,
+          "p": 0.3888888888888889,
+          "ci95": [
+            0.30825962345130464,
+            0.4760927686558505
+          ]
+        },
+        "mcnemar": {
+          "b": 73,
+          "c": 1,
+          "n_discordant": 74,
+          "p_value": 7.940933880509066e-21
+        },
+        "cluster_bootstrap": {
+          "diff": 0.5714285714285714,
+          "ci95": [
+            0.5,
+            0.6428571428571429
+          ],
+          "n_clusters": 21,
+          "n_cases": 126,
+          "n_boot": 10000
+        }
+      },
+      "deltaspec_vs_output_equal_by_scenario": {
+        "method_a": "deltaspec",
+        "method_b": "output_equal",
+        "outcome": "correct",
+        "n_cases": 126,
+        "rate_a": {
+          "k": 121,
+          "n": 126,
+          "p": 0.9603174603174603,
+          "ci95": [
+            0.9104643457790981,
+            0.9829328869198303
+          ]
+        },
+        "rate_b": {
+          "k": 49,
+          "n": 126,
+          "p": 0.3888888888888889,
+          "ci95": [
+            0.30825962345130464,
+            0.4760927686558505
+          ]
+        },
+        "mcnemar": {
+          "b": 73,
+          "c": 1,
+          "n_discordant": 74,
+          "p_value": 7.940933880509066e-21
+        },
+        "cluster_bootstrap": {
+          "diff": 0.5714285714285714,
+          "ci95": [
+            0.48484848484848486,
+            0.6481481481481481
+          ],
+          "n_clusters": 18,
+          "n_cases": 126,
+          "n_boot": 10000
+        }
+      },
+      "deltaspec_vs_hash_equal_by_task": {
+        "method_a": "deltaspec",
+        "method_b": "hash_equal",
+        "outcome": "correct",
+        "n_cases": 126,
+        "rate_a": {
+          "k": 121,
+          "n": 126,
+          "p": 0.9603174603174603,
+          "ci95": [
+            0.9104643457790981,
+            0.9829328869198303
+          ]
+        },
+        "rate_b": {
+          "k": 122,
+          "n": 126,
+          "p": 0.9682539682539683,
+          "ci95": [
+            0.9212139122353924,
+            0.9875867210273106
+          ]
+        },
+        "mcnemar": {
+          "b": 3,
+          "c": 4,
+          "n_discordant": 7,
+          "p_value": 1.0
+        },
+        "cluster_bootstrap": {
+          "diff": -0.007936507936507936,
+          "ci95": [
+            -0.031746031746031744,
+            0.015873015873015872
+          ],
+          "n_clusters": 21,
+          "n_cases": 126,
+          "n_boot": 10000
+        }
+      },
+      "deltaspec_vs_hash_equal_by_scenario": {
+        "method_a": "deltaspec",
+        "method_b": "hash_equal",
+        "outcome": "correct",
+        "n_cases": 126,
+        "rate_a": {
+          "k": 121,
+          "n": 126,
+          "p": 0.9603174603174603,
+          "ci95": [
+            0.9104643457790981,
+            0.9829328869198303
+          ]
+        },
+        "rate_b": {
+          "k": 122,
+          "n": 126,
+          "p": 0.9682539682539683,
+          "ci95": [
+            0.9212139122353924,
+            0.9875867210273106
+          ]
+        },
+        "mcnemar": {
+          "b": 3,
+          "c": 4,
+          "n_discordant": 7,
+          "p_value": 1.0
+        },
+        "cluster_bootstrap": {
+          "diff": -0.007936507936507936,
+          "ci95": [
+            -0.043478260869565216,
+            0.025
+          ],
+          "n_clusters": 18,
+          "n_cases": 126,
+          "n_boot": 10000
+        }
+      },
+      "deltaspec_vs_oneshot_by_task": {
+        "method_a": "deltaspec",
+        "method_b": "oneshot",
+        "outcome": "correct",
+        "n_cases": 66,
+        "rate_a": {
+          "k": 62,
+          "n": 66,
+          "p": 0.9393939393939394,
+          "ci95": [
+            0.8542709132143579,
+            0.9761813851676816
+          ]
+        },
+        "rate_b": {
+          "k": 48,
+          "n": 66,
+          "p": 0.7272727272727273,
+          "ci95": [
+            0.6095777422224589,
+            0.8199665500441133
+          ]
+        },
+        "mcnemar": {
+          "b": 14,
+          "c": 0,
+          "n_discordant": 14,
+          "p_value": 0.0001220703125
+        },
+        "cluster_bootstrap": {
+          "diff": 0.21212121212121213,
+          "ci95": [
+            0.12121212121212122,
+            0.2878787878787879
+          ],
+          "n_clusters": 11,
+          "n_cases": 66,
+          "n_boot": 10000
+        }
+      }
+    },
+    "n_cases": 126,
+    "coverage": {
+      "n": 22,
+      "deltaspec": 21,
+      "v061": 12,
+      "mcnemar": {
+        "b": 10,
+        "c": 1,
+        "n_discordant": 11,
+        "p_value": 0.01171875
+      }
+    }
+  },
+  "primary+retry": {
+    "per_scenario": {
+      "07b42fd": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 3,
+        "unsafe": 0,
+        "pos": 3,
+        "fb": 0
+      },
+      "0d8a4ee": {
+        "tier": "A",
+        "tasks": 3,
+        "evaluable": 0,
+        "auto": 0,
+        "neg": 0,
+        "unsafe": 0,
+        "pos": 0,
+        "fb": 0
+      },
+      "229360a": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 0
+      },
+      "22cc237": {
+        "tier": "A",
+        "tasks": 3,
+        "evaluable": 3,
+        "auto": 3,
+        "neg": 12,
+        "unsafe": 6,
+        "pos": 6,
+        "fb": 0
+      },
+      "29caf6f": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 0
+      },
+      "37a8675": {
+        "tier": "A",
+        "tasks": 2,
+        "evaluable": 0,
+        "auto": 0,
+        "neg": 0,
+        "unsafe": 0,
+        "pos": 0,
+        "fb": 0
+      },
+      "3c13f5a": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 1
+      },
+      "530b157": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 5,
+        "unsafe": 0,
+        "pos": 1,
+        "fb": 0
+      },
+      "60d0b5b": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 3,
+        "unsafe": 0,
+        "pos": 3,
+        "fb": 0
+      },
+      "6c2c621": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 0
+      },
+      "7d7fbf6": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 5,
+        "unsafe": 0,
+        "pos": 1,
+        "fb": 0
+      },
+      "aa8502b": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 0
+      },
+      "afc0fce": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 0
+      },
+      "b119b1f": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 2,
+        "unsafe": 0,
+        "pos": 4,
+        "fb": 0
+      },
+      "c901732": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 3,
+        "unsafe": 0,
+        "pos": 3,
+        "fb": 0
+      },
+      "ccb4494": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 0
+      },
+      "ce359b5": {
+        "tier": "A",
+        "tasks": 3,
+        "evaluable": 3,
+        "auto": 3,
+        "neg": 12,
+        "unsafe": 0,
+        "pos": 6,
+        "fb": 0
+      },
+      "cf6abd2": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 3,
+        "unsafe": 0,
+        "pos": 3,
+        "fb": 0
+      },
+      "d4e9306": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 0
+      },
+      "e3d6c94": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 0
+      }
+    },
+    "comparisons": {
+      "deltaspec_vs_output_equal_by_task": {
+        "method_a": "deltaspec",
+        "method_b": "output_equal",
+        "outcome": "correct",
+        "n_cases": 132,
+        "rate_a": {
+          "k": 125,
+          "n": 132,
+          "p": 0.946969696969697,
+          "ci95": [
+            0.8945821108242697,
+            0.9740775827951562
+          ]
+        },
+        "rate_b": {
+          "k": 51,
+          "n": 132,
+          "p": 0.38636363636363635,
+          "ci95": [
+            0.3076326608163387,
+            0.4715216543651633
+          ]
+        },
+        "mcnemar": {
+          "b": 75,
+          "c": 1,
+          "n_discordant": 76,
+          "p_value": 2.0381730293306602e-21
+        },
+        "cluster_bootstrap": {
+          "diff": 0.5606060606060606,
+          "ci95": [
+            0.48484848484848486,
+            0.6287878787878788
+          ],
+          "n_clusters": 22,
+          "n_cases": 132,
+          "n_boot": 10000
+        }
+      },
+      "deltaspec_vs_output_equal_by_scenario": {
+        "method_a": "deltaspec",
+        "method_b": "output_equal",
+        "outcome": "correct",
+        "n_cases": 132,
+        "rate_a": {
+          "k": 125,
+          "n": 132,
+          "p": 0.946969696969697,
+          "ci95": [
+            0.8945821108242697,
+            0.9740775827951562
+          ]
+        },
+        "rate_b": {
+          "k": 51,
+          "n": 132,
+          "p": 0.38636363636363635,
+          "ci95": [
+            0.3076326608163387,
+            0.4715216543651633
+          ]
+        },
+        "mcnemar": {
+          "b": 75,
+          "c": 1,
+          "n_discordant": 76,
+          "p_value": 2.0381730293306602e-21
+        },
+        "cluster_bootstrap": {
+          "diff": 0.5606060606060606,
+          "ci95": [
+            0.4722222222222222,
+            0.6474358974358975
+          ],
+          "n_clusters": 18,
+          "n_cases": 132,
+          "n_boot": 10000
+        }
+      },
+      "deltaspec_vs_hash_equal_by_task": {
+        "method_a": "deltaspec",
+        "method_b": "hash_equal",
+        "outcome": "correct",
+        "n_cases": 132,
+        "rate_a": {
+          "k": 125,
+          "n": 132,
+          "p": 0.946969696969697,
+          "ci95": [
+            0.8945821108242697,
+            0.9740775827951562
+          ]
+        },
+        "rate_b": {
+          "k": 127,
+          "n": 132,
+          "p": 0.9621212121212122,
+          "ci95": [
+            0.9143919640569403,
+            0.9837138208716186
+          ]
+        },
+        "mcnemar": {
+          "b": 4,
+          "c": 6,
+          "n_discordant": 10,
+          "p_value": 0.75390625
+        },
+        "cluster_bootstrap": {
+          "diff": -0.015151515151515152,
+          "ci95": [
+            -0.045454545454545456,
+            0.015151515151515152
+          ],
+          "n_clusters": 22,
+          "n_cases": 132,
+          "n_boot": 10000
+        }
+      },
+      "deltaspec_vs_hash_equal_by_scenario": {
+        "method_a": "deltaspec",
+        "method_b": "hash_equal",
+        "outcome": "correct",
+        "n_cases": 132,
+        "rate_a": {
+          "k": 125,
+          "n": 132,
+          "p": 0.946969696969697,
+          "ci95": [
+            0.8945821108242697,
+            0.9740775827951562
+          ]
+        },
+        "rate_b": {
+          "k": 127,
+          "n": 132,
+          "p": 0.9621212121212122,
+          "ci95": [
+            0.9143919640569403,
+            0.9837138208716186
+          ]
+        },
+        "mcnemar": {
+          "b": 4,
+          "c": 6,
+          "n_discordant": 10,
+          "p_value": 0.75390625
+        },
+        "cluster_bootstrap": {
+          "diff": -0.015151515151515152,
+          "ci95": [
+            -0.057692307692307696,
+            0.025
+          ],
+          "n_clusters": 18,
+          "n_cases": 132,
+          "n_boot": 10000
+        }
+      },
+      "deltaspec_vs_oneshot_by_task": {
+        "method_a": "deltaspec",
+        "method_b": "oneshot",
+        "outcome": "correct",
+        "n_cases": 72,
+        "rate_a": {
+          "k": 66,
+          "n": 72,
+          "p": 0.9166666666666666,
+          "ci95": [
+            0.8298764477932348,
+            0.9612475750430503
+          ]
+        },
+        "rate_b": {
+          "k": 52,
+          "n": 72,
+          "p": 0.7222222222222222,
+          "ci95": [
+            0.6095356707476457,
+            0.8123971414317063
+          ]
+        },
+        "mcnemar": {
+          "b": 14,
+          "c": 0,
+          "n_discordant": 14,
+          "p_value": 0.0001220703125
+        },
+        "cluster_bootstrap": {
+          "diff": 0.19444444444444445,
+          "ci95": [
+            0.1111111111111111,
+            0.2777777777777778
+          ],
+          "n_clusters": 12,
+          "n_cases": 72,
+          "n_boot": 10000
+        }
+      }
+    },
+    "n_cases": 132,
+    "coverage": {
+      "n": 22,
+      "deltaspec": 22,
+      "v061": 12,
+      "mcnemar": {
+        "b": 10,
+        "c": 0,
+        "n_discordant": 10,
+        "p_value": 0.001953125
+      }
+    }
+  },
+  "all": {
+    "per_scenario": {
+      "07b42fd": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 3,
+        "unsafe": 0,
+        "pos": 3,
+        "fb": 0
+      },
+      "0d8a4ee": {
+        "tier": "A",
+        "tasks": 3,
+        "evaluable": 3,
+        "auto": 3,
+        "neg": 15,
+        "unsafe": 0,
+        "pos": 3,
+        "fb": 0
+      },
+      "229360a": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 0
+      },
+      "22cc237": {
+        "tier": "A",
+        "tasks": 3,
+        "evaluable": 3,
+        "auto": 3,
+        "neg": 12,
+        "unsafe": 6,
+        "pos": 6,
+        "fb": 0
+      },
+      "29caf6f": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 0
+      },
+      "37a8675": {
+        "tier": "A",
+        "tasks": 2,
+        "evaluable": 2,
+        "auto": 2,
+        "neg": 6,
+        "unsafe": 0,
+        "pos": 6,
+        "fb": 0
+      },
+      "3c13f5a": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 1
+      },
+      "530b157": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 5,
+        "unsafe": 0,
+        "pos": 1,
+        "fb": 0
+      },
+      "60d0b5b": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 3,
+        "unsafe": 0,
+        "pos": 3,
+        "fb": 0
+      },
+      "6c2c621": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 0
+      },
+      "7d7fbf6": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 5,
+        "unsafe": 0,
+        "pos": 1,
+        "fb": 0
+      },
+      "aa8502b": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 0
+      },
+      "afc0fce": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 0
+      },
+      "b119b1f": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 2,
+        "unsafe": 0,
+        "pos": 4,
+        "fb": 0
+      },
+      "c901732": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 3,
+        "unsafe": 0,
+        "pos": 3,
+        "fb": 0
+      },
+      "ccb4494": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 0
+      },
+      "ce359b5": {
+        "tier": "A",
+        "tasks": 3,
+        "evaluable": 3,
+        "auto": 3,
+        "neg": 12,
+        "unsafe": 0,
+        "pos": 6,
+        "fb": 0
+      },
+      "cf6abd2": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 3,
+        "unsafe": 0,
+        "pos": 3,
+        "fb": 0
+      },
+      "d4e9306": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 0
+      },
+      "e3d6c94": {
+        "tier": "B",
+        "tasks": 1,
+        "evaluable": 1,
+        "auto": 1,
+        "neg": 4,
+        "unsafe": 0,
+        "pos": 2,
+        "fb": 0
+      }
+    },
+    "comparisons": {
+      "deltaspec_vs_output_equal_by_task": {
+        "method_a": "deltaspec",
+        "method_b": "output_equal",
+        "outcome": "correct",
+        "n_cases": 162,
+        "rate_a": {
+          "k": 155,
+          "n": 162,
+          "p": 0.9567901234567902,
+          "ci95": [
+            0.9135046277168113,
+            0.9789139571921401
+          ]
+        },
+        "rate_b": {
+          "k": 60,
+          "n": 162,
+          "p": 0.37037037037037035,
+          "ci95": [
+            0.2998159760621741,
+            0.44693010119339366
+          ]
+        },
+        "mcnemar": {
+          "b": 96,
+          "c": 1,
+          "n_discordant": 97,
+          "p_value": 1.2369338993865465e-27
+        },
+        "cluster_bootstrap": {
+          "diff": 0.5864197530864198,
+          "ci95": [
+            0.5185185185185185,
+            0.654320987654321
+          ],
+          "n_clusters": 27,
+          "n_cases": 162,
+          "n_boot": 10000
+        }
+      },
+      "deltaspec_vs_output_equal_by_scenario": {
+        "method_a": "deltaspec",
+        "method_b": "output_equal",
+        "outcome": "correct",
+        "n_cases": 162,
+        "rate_a": {
+          "k": 155,
+          "n": 162,
+          "p": 0.9567901234567902,
+          "ci95": [
+            0.9135046277168113,
+            0.9789139571921401
+          ]
+        },
+        "rate_b": {
+          "k": 60,
+          "n": 162,
+          "p": 0.37037037037037035,
+          "ci95": [
+            0.2998159760621741,
+            0.44693010119339366
+          ]
+        },
+        "mcnemar": {
+          "b": 96,
+          "c": 1,
+          "n_discordant": 97,
+          "p_value": 1.2369338993865465e-27
+        },
+        "cluster_bootstrap": {
+          "diff": 0.5864197530864198,
+          "ci95": [
+            0.4935897435897436,
+            0.6730769230769231
+          ],
+          "n_clusters": 20,
+          "n_cases": 162,
+          "n_boot": 10000
+        }
+      },
+      "deltaspec_vs_hash_equal_by_task": {
+        "method_a": "deltaspec",
+        "method_b": "hash_equal",
+        "outcome": "correct",
+        "n_cases": 162,
+        "rate_a": {
+          "k": 155,
+          "n": 162,
+          "p": 0.9567901234567902,
+          "ci95": [
+            0.9135046277168113,
+            0.9789139571921401
+          ]
+        },
+        "rate_b": {
+          "k": 157,
+          "n": 162,
+          "p": 0.9691358024691358,
+          "ci95": [
+            0.9297919442305332,
+            0.9867460618921736
+          ]
+        },
+        "mcnemar": {
+          "b": 4,
+          "c": 6,
+          "n_discordant": 10,
+          "p_value": 0.75390625
+        },
+        "cluster_bootstrap": {
+          "diff": -0.012345679012345678,
+          "ci95": [
+            -0.037037037037037035,
+            0.012345679012345678
+          ],
+          "n_clusters": 27,
+          "n_cases": 162,
+          "n_boot": 10000
+        }
+      },
+      "deltaspec_vs_hash_equal_by_scenario": {
+        "method_a": "deltaspec",
+        "method_b": "hash_equal",
+        "outcome": "correct",
+        "n_cases": 162,
+        "rate_a": {
+          "k": 155,
+          "n": 162,
+          "p": 0.9567901234567902,
+          "ci95": [
+            0.9135046277168113,
+            0.9789139571921401
+          ]
+        },
+        "rate_b": {
+          "k": 157,
+          "n": 162,
+          "p": 0.9691358024691358,
+          "ci95": [
+            0.9297919442305332,
+            0.9867460618921736
+          ]
+        },
+        "mcnemar": {
+          "b": 4,
+          "c": 6,
+          "n_discordant": 10,
+          "p_value": 0.75390625
+        },
+        "cluster_bootstrap": {
+          "diff": -0.012345679012345678,
+          "ci95": [
+            -0.05,
+            0.017857142857142856
+          ],
+          "n_clusters": 20,
+          "n_cases": 162,
+          "n_boot": 10000
+        }
+      },
+      "deltaspec_vs_oneshot_by_task": {
+        "method_a": "deltaspec",
+        "method_b": "oneshot",
+        "outcome": "correct",
+        "n_cases": 90,
+        "rate_a": {
+          "k": 84,
+          "n": 90,
+          "p": 0.9333333333333333,
+          "ci95": [
+            0.8620990522567448,
+            0.9690900722541721
+          ]
+        },
+        "rate_b": {
+          "k": 63,
+          "n": 90,
+          "p": 0.7,
+          "ci95": [
+            0.598734894751539,
+            0.7848908550227303
+          ]
+        },
+        "mcnemar": {
+          "b": 21,
+          "c": 0,
+          "n_discordant": 21,
+          "p_value": 9.5367431640625e-07
+        },
+        "cluster_bootstrap": {
+          "diff": 0.23333333333333334,
+          "ci95": [
+            0.14444444444444443,
+            0.3111111111111111
+          ],
+          "n_clusters": 15,
+          "n_cases": 90,
+          "n_boot": 10000
+        }
+      }
+    },
+    "n_cases": 162,
+    "coverage": {
+      "n": 27,
+      "deltaspec": 27,
+      "v061": 15,
+      "mcnemar": {
+        "b": 12,
+        "c": 0,
+        "n_discordant": 12,
+        "p_value": 0.00048828125
+      }
+    }
+  }
+}

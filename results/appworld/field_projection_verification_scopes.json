@@ -1,0 +1,51 @@
+{
+  "b0a8eae_1": {
+    "wall_s": 13.0,
+    "instruction": "Start playing a playlist on Spotify that has enough songs for my workout today. I do not w",
+    "tier1_bytes": 82379,
+    "prompt_view_bytes": 21931,
+    "n_tables": 22,
+    "n_rows": 230,
+    "truncated": [],
+    "scopes": {
+      "owner": 16,
+      "owner_child": 1,
+      "fk_hop": 5
+    },
+    "owner_child_examples": [
+      [
+        "spotify.PlaylistSong",
+        1
+      ]
+    ],
+    "record_hash_in_types": false,
+    "PlaylistSong": {
+      "scope": "owner_child",
+      "n_total": 1,
+      "n_projected": 1
+    },
+    "Song_rows": 72,
+    "classical_songs_in_my_playlists": 10
+  },
+  "229360a_1": {
+    "wall_s": 12.7,
+    "instruction": "I need to cleanup my Spotify libraries. Keep only those songs and albums in my song and al",
+    "tier1_bytes": 41637,
+    "prompt_view_bytes": 13131,
+    "n_tables": 20,
+    "n_rows": 251,
+    "truncated": [],
+    "scopes": {
+      "owner": 15,
+      "owner_child": 1,
+      "fk_hop": 4
+    },
+    "owner_child_examples": [
+      [
+        "spotify.PlaylistSong",
+        35
+      ]
+    ],
+    "record_hash_in_types": false
+  }
+}

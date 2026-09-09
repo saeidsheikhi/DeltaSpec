@@ -1,0 +1,11 @@
+{
+  "n_tasks": 24,
+  "n_reference_valid": 22,
+  "n_reference_invalid": 2,
+  "n_errors": 0,
+  "reference_valid_rate": 0.9166666666666666,
+  "invalid_task_ids": [
+    "3ab5b8b_1",
+    "37a8675_1"
+  ]
+}

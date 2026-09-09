@@ -1,0 +1,35 @@
+{
+  "frozen_at": "2026-09-05T16:47:53Z",
+  "system": "relational field-aware DSL v0.5, condition relational_v05_diag (+ gemma3:27b probe)",
+  "headline": {
+    "paired_n": 7,
+    "agreement": "0/7",
+    "clean_compilation": "2/7",
+    "representability_errors": 0,
+    "status": "PRESERVED NEGATIVE RESULT \u2014 join ceiling closed; binding failures remain"
+  },
+  "files": {
+    "prompts/contract_repair_appworld_v5_relational.md": "e8d3cddd9ca3a652897047b25534b116b3ed9a9918541feaa49acadf6434830d",
+    "prompts/contract_compiler_appworld_v5_relational.md": "2d56a313863e0a70d13eb5b1ac3721b9889de29577504f77e210655840ce9404",
+    "results/appworld_relational/sanity_runs.jsonl": "b8d5dbe413cec4dc22a847d4b031bf913ba0cec0689c0b91bfe0cbf3e603b31d",
+    "results/appworld_relational/counterfactual_simplify.json": "9fbde22d29fa4da1c91ed41f9af49a2a164018a9607507fa7de3e0c7dba4f58b",
+    "results/appworld_relational/provider_calls.jsonl": "689c2ac506ebbb52f5290d3829ebd28f7538dab366c8378d6d5f2c034c5fa998",
+    "results/appworld_relational/counterfactual_simplify_relational_v05_diag.json": "7fa5293e709a446d69f56c24a169e774ecbd7e97ff8d1b9c7412450a3b033a10",
+    "results/appworld_relational/compiler_error_classes.json": "0c6ef205100c7def9e8b70b65300d1e4b27951e9f67f42f676fcb3a51e58d32e",
+    "results/appworld_relational/comparison_relational_v05_diag.json": "d1c876a951e773183f6ad9bdf2cfc69b08441db79c48a60204b8bd13da940b61",
+    "results/appworld_relational/sanity_manifest.relational_v05_diag.json": "f95d716d2a25aa0000ff8b22c845801f5cc498d565ff5fd988c85fa0d4afb87e",
+    "results/appworld_relational/sanity_summary.json": "b6230b41ceb5dbf3a23d9fa676f39d0253d4542a3658bdd455f38af94ab71d25",
+    "results/appworld_relational/sanity_manifest.json": "f95d716d2a25aa0000ff8b22c845801f5cc498d565ff5fd988c85fa0d4afb87e",
+    "results/frozen_systems/relational_dsl_v0.5.json": "f782e431acccf02e4a496c33f8b64aac31ec70a03f76ec8f4b37327bfd14babb",
+    "results/appworld_relational_probe/sanity_runs.jsonl": "db56bc81eba1d335884af1857978c7dc351fda79bc2e721da2a313c98cd481be",
+    "results/appworld_relational_probe/provider_calls.jsonl": "4915bacfdf9551ddd67a3c4b1a78c1273ade3b0b26916ad9fbd1954715bc9996",
+    "results/appworld_relational_probe/sanity_manifest.relational_v05_probe_gemma3_27b.json": "6a12abd18ce7bced51ea3171511176c9d53e409cf0fe7255e99da20d243a8078",
+    "results/appworld_relational_probe/counterfactual_simplify_relational_v05_probe_gemma3_27b.json": "ac48bdf55b0d3341d59fe8d67b6fb5d2c1daea4af0b886118f85722485fca5d0",
+    "results/appworld_relational_probe/sanity_summary.json": "6099bdf5a156f6ecd349aeb5483e029022f2a1c8daaffd57987143f9c0ebc2c7",
+    "results/appworld_relational_probe/sanity_manifest.json": "6a12abd18ce7bced51ea3171511176c9d53e409cf0fe7255e99da20d243a8078",
+    "results/appworld_relational/prompts/relational_v05_diag.repair.md": "e8d3cddd9ca3a652897047b25534b116b3ed9a9918541feaa49acadf6434830d",
+    "results/appworld_relational/prompts/relational_v05_diag.compiler.md": "2d56a313863e0a70d13eb5b1ac3721b9889de29577504f77e210655840ce9404",
+    "results/appworld_relational_probe/prompts/relational_v05_probe_gemma3_27b.repair.md": "e8d3cddd9ca3a652897047b25534b116b3ed9a9918541feaa49acadf6434830d",
+    "results/appworld_relational_probe/prompts/relational_v05_probe_gemma3_27b.compiler.md": "2d56a313863e0a70d13eb5b1ac3721b9889de29577504f77e210655840ce9404"
+  }
+}

@@ -1,0 +1,25 @@
+# environments and caches
+.venv/
+.venv-appworld/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+# secrets / machine-specific
+.env
+*.log
+# AppWorld data must live outside the repository (see README)
+appworld-root/
+data/
+# editor / OS
+.DS_Store
+.idea/
+.vscode/
+# manuscript material is never part of this repository
+paper/
+*.tex
+*.pdf
+*.aux
+*.bbl
+*.blg

@@ -1,0 +1,13 @@
+--- appworld_worker.deltaspec_v1.py	2026-09-06 19:41:08.155561833 +0000
++++ appworld_worker.deltaspec_v1_rof.py	2026-09-06 19:41:08.155561833 +0000
+@@ -484,7 +484,9 @@
+ 
+ def _open(task_id: str, experiment: str):
+     from appworld import AppWorld
+-    return AppWorld(task_id=task_id, experiment_name=experiment)
++    # post-hoc condition (2026-09-06): AppWorld verifies its own ground truth with
++    # raise_on_failure=False; the default (True) aborts references that probe error responses
++    return AppWorld(task_id=task_id, experiment_name=experiment, raise_on_failure=False)
+ 
+ 
+ def op_state(req: dict) -> dict:

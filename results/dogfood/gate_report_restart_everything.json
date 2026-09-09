@@ -1,0 +1,2681 @@
+{
+  "candidate_version": "restart_everything",
+  "environment": "dogfood-staging",
+  "decision": "BLOCK",
+  "reasons": [
+    "df_enable_feature_x: effect-contract violation - invariants:/services/worker/starts unchanged",
+    "df_worker_concurrency: effect-contract violation - invariants:/services/web/starts unchanged",
+    "df_rotate_token: effect-contract violation - invariants:/services/web/starts unchanged",
+    "df_restart_web_only: effect-contract violation - invariants:/services/worker/starts unchanged",
+    "df_concurrency_back_to_two: effect-contract violation - invariants:/services/web/starts unchanged",
+    "df_restart_worker_only: effect-contract violation - invariants:/services/web/starts unchanged"
+  ],
+  "summary": {
+    "n_tasks": 25,
+    "n_failed": 6,
+    "n_passed": 19
+  },
+  "task_results": [
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_enable_feature_x",
+      "family": "config",
+      "pre_state_hash": "9c4456d37085772f",
+      "post_state_hash": "2009d41290f6099c",
+      "contract_hash": "075385676711e7d8",
+      "passed": false,
+      "status": "fail",
+      "critical_violation": true,
+      "violations": [
+        {
+          "group": "invariants",
+          "predicate": {
+            "kind": "delta",
+            "path": "/services/worker/starts",
+            "op": "unchanged",
+            "value": null,
+            "description": "the worker service must not be restarted",
+            "critical": true
+          },
+          "raw": false,
+          "satisfied": false,
+          "error": null
+        }
+      ],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "set_config_key",
+          "args": {
+            "key": "feature_x",
+            "value": true
+          },
+          "ok": true,
+          "result": {
+            "key": "feature_x",
+            "value": true
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113461
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113462
+          },
+          "error": null
+        },
+        {
+          "index": 3,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113464
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/config/feature_x",
+          "before": false,
+          "after": true,
+          "kind": "modified"
+        },
+        {
+          "path": "/health/feature_x",
+          "before": false,
+          "after": true,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/web/starts",
+          "before": 40,
+          "after": 42,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 38,
+          "after": 39,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_worker_concurrency",
+      "family": "config",
+      "pre_state_hash": "edd9b79b3659b2c3",
+      "post_state_hash": "c07ce9a343c13172",
+      "contract_hash": "34519c65d682038c",
+      "passed": false,
+      "status": "fail",
+      "critical_violation": true,
+      "violations": [
+        {
+          "group": "invariants",
+          "predicate": {
+            "kind": "delta",
+            "path": "/services/web/starts",
+            "op": "unchanged",
+            "value": null,
+            "description": "the web service must not be restarted",
+            "critical": true
+          },
+          "raw": false,
+          "satisfied": false,
+          "error": null
+        }
+      ],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "set_config_key",
+          "args": {
+            "key": "worker_concurrency",
+            "value": 4
+          },
+          "ok": true,
+          "result": {
+            "key": "worker_concurrency",
+            "value": 4
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113477
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113478
+          },
+          "error": null
+        },
+        {
+          "index": 3,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113480
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/config/worker_concurrency",
+          "before": 2,
+          "after": 4,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/web/starts",
+          "before": 43,
+          "after": 44,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 41,
+          "after": 43,
+          "kind": "modified"
+        },
+        {
+          "path": "/worker/started_with/worker_concurrency",
+          "before": 2,
+          "after": 4,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_log_level_debug",
+      "family": "config",
+      "pre_state_hash": "9f3b7e656867f3a0",
+      "post_state_hash": "b09d6fd1ca36b5d0",
+      "contract_hash": "6f1f3cd3da24601f",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "set_config_key",
+          "args": {
+            "key": "log_level",
+            "value": "debug"
+          },
+          "ok": true,
+          "result": {
+            "key": "log_level",
+            "value": "debug"
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113492
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113493
+          },
+          "error": null
+        },
+        {
+          "index": 3,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113494
+          },
+          "error": null
+        },
+        {
+          "index": 4,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113495
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/config/log_level",
+          "before": "info",
+          "after": "debug",
+          "kind": "modified"
+        },
+        {
+          "path": "/health/log_level",
+          "before": "info",
+          "after": "debug",
+          "kind": "modified"
+        },
+        {
+          "path": "/services/web/starts",
+          "before": 45,
+          "after": 47,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 44,
+          "after": 46,
+          "kind": "modified"
+        },
+        {
+          "path": "/worker/started_with/log_level",
+          "before": "info",
+          "after": "debug",
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_deploy_v2",
+      "family": "deploy",
+      "pre_state_hash": "b3554ff539cf9ee5",
+      "post_state_hash": "a18bf2e426fdf306",
+      "contract_hash": "c073f243a3224193",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "deploy_version",
+          "args": {
+            "tag": "v2"
+          },
+          "ok": true,
+          "result": {
+            "version": "v2",
+            "git": {
+              "initialised": true,
+              "head": "0a3730e",
+              "dirty": false,
+              "commits": 2
+            }
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113518
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113522
+          },
+          "error": null
+        },
+        {
+          "index": 3,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113523
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/config/version",
+          "before": "v1",
+          "after": "v2",
+          "kind": "modified"
+        },
+        {
+          "path": "/git/commits",
+          "before": 1,
+          "after": 2,
+          "kind": "modified"
+        },
+        {
+          "path": "/git/head",
+          "before": "fb05dc4",
+          "after": "0a3730e",
+          "kind": "modified"
+        },
+        {
+          "path": "/health/version",
+          "before": "v1",
+          "after": "v2",
+          "kind": "modified"
+        },
+        {
+          "path": "/services/web/starts",
+          "before": 48,
+          "after": 50,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 47,
+          "after": 48,
+          "kind": "modified"
+        },
+        {
+          "path": "/worker/started_with/version",
+          "before": "v1",
+          "after": "v2",
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_rollback_to_v1",
+      "family": "deploy",
+      "pre_state_hash": "3b821c209f1346c7",
+      "post_state_hash": "68b257664fa70e86",
+      "contract_hash": "4b8d69eb4c4e9fb1",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "deploy_version",
+          "args": {
+            "tag": "v1"
+          },
+          "ok": true,
+          "result": {
+            "version": "v1",
+            "git": {
+              "initialised": true,
+              "head": "7258835",
+              "dirty": false,
+              "commits": 3
+            }
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113548
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113549
+          },
+          "error": null
+        },
+        {
+          "index": 3,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113550
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/config/version",
+          "before": "v2",
+          "after": "v1",
+          "kind": "modified"
+        },
+        {
+          "path": "/git/commits",
+          "before": 2,
+          "after": 3,
+          "kind": "modified"
+        },
+        {
+          "path": "/git/head",
+          "before": "248f485",
+          "after": "7258835",
+          "kind": "modified"
+        },
+        {
+          "path": "/health/version",
+          "before": "v2",
+          "after": "v1",
+          "kind": "modified"
+        },
+        {
+          "path": "/services/web/starts",
+          "before": 52,
+          "after": 54,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 49,
+          "after": 50,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_backup_then_update_record",
+      "family": "data",
+      "pre_state_hash": "7621cf809d8aa865",
+      "post_state_hash": "54b3dd029f877bb9",
+      "contract_hash": "4839cfe9e4dd19b3",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "create_backup",
+          "args": {
+            "name": "pre-tier-change"
+          },
+          "ok": true,
+          "result": {
+            "backup": "pre-tier-change",
+            "files": [
+              "app.sqlite3",
+              "config.json"
+            ]
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "db_update",
+          "args": {
+            "table": "customers",
+            "row_id": "c1",
+            "field": "tier",
+            "value": "pro"
+          },
+          "ok": true,
+          "result": {
+            "table": "customers",
+            "row_id": "c1",
+            "field": "tier",
+            "value": "pro"
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113563
+          },
+          "error": null
+        },
+        {
+          "index": 3,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113565
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/backups",
+          "before": [],
+          "after": [
+            "pre-tier-change"
+          ],
+          "kind": "modified"
+        },
+        {
+          "path": "/db/customers/c1/tier",
+          "before": "basic",
+          "after": "pro",
+          "kind": "modified"
+        },
+        {
+          "path": "/services/web/starts",
+          "before": 55,
+          "after": 56,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 51,
+          "after": 52,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_mark_invoice_paid",
+      "family": "data",
+      "pre_state_hash": "08de1db6c1638d54",
+      "post_state_hash": "be54fbafe7cff2f9",
+      "contract_hash": "e9fc1f9e41d8a0ef",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "create_backup",
+          "args": {
+            "name": "pre-invoice"
+          },
+          "ok": true,
+          "result": {
+            "backup": "pre-invoice",
+            "files": [
+              "app.sqlite3",
+              "config.json"
+            ]
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "db_update",
+          "args": {
+            "table": "invoices",
+            "row_id": "i114",
+            "field": "status",
+            "value": "paid"
+          },
+          "ok": true,
+          "result": {
+            "table": "invoices",
+            "row_id": "i114",
+            "field": "status",
+            "value": "paid"
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113577
+          },
+          "error": null
+        },
+        {
+          "index": 3,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113578
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/backups",
+          "before": [],
+          "after": [
+            "pre-invoice"
+          ],
+          "kind": "modified"
+        },
+        {
+          "path": "/db/invoices/i114/status",
+          "before": "unpaid",
+          "after": "paid",
+          "kind": "modified"
+        },
+        {
+          "path": "/services/web/starts",
+          "before": 57,
+          "after": 58,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 53,
+          "after": 54,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_restore_backup",
+      "family": "data",
+      "pre_state_hash": "9c350047989d2af5",
+      "post_state_hash": "6a0dff8cb51703e6",
+      "contract_hash": "edec332889f3271b",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "restore_backup",
+          "args": {
+            "name": "known-good"
+          },
+          "ok": true,
+          "result": {
+            "restored": "known-good"
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113630
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113631
+          },
+          "error": null
+        },
+        {
+          "index": 3,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113632
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/db/customers/c1/tier",
+          "before": "enterprise",
+          "after": "basic",
+          "kind": "modified"
+        },
+        {
+          "path": "/services/web/starts",
+          "before": 59,
+          "after": 61,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 55,
+          "after": 56,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_deactivate_customer",
+      "family": "data",
+      "pre_state_hash": "52f96ddd4003def7",
+      "post_state_hash": "eb378892a07bc74e",
+      "contract_hash": "f827b6ce2b9a2c65",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "create_backup",
+          "args": {
+            "name": "pre-deactivate"
+          },
+          "ok": true,
+          "result": {
+            "backup": "pre-deactivate",
+            "files": [
+              "app.sqlite3",
+              "config.json"
+            ]
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "db_update",
+          "args": {
+            "table": "customers",
+            "row_id": "c2",
+            "field": "active",
+            "value": 0
+          },
+          "ok": true,
+          "result": {
+            "table": "customers",
+            "row_id": "c2",
+            "field": "active",
+            "value": 0
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113645
+          },
+          "error": null
+        },
+        {
+          "index": 3,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113646
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/backups",
+          "before": [],
+          "after": [
+            "pre-deactivate"
+          ],
+          "kind": "modified"
+        },
+        {
+          "path": "/db/customers/c2/active",
+          "before": 1,
+          "after": 0,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/web/starts",
+          "before": 62,
+          "after": 63,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 57,
+          "after": 58,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_rotate_token",
+      "family": "secrets",
+      "pre_state_hash": "32a3262309a11f52",
+      "post_state_hash": "d326712cdce68a74",
+      "contract_hash": "f72dc4b6e14865cb",
+      "passed": false,
+      "status": "fail",
+      "critical_violation": true,
+      "violations": [
+        {
+          "group": "invariants",
+          "predicate": {
+            "kind": "delta",
+            "path": "/services/web/starts",
+            "op": "unchanged",
+            "value": null,
+            "description": "the web service must not be restarted",
+            "critical": true
+          },
+          "raw": false,
+          "satisfied": false,
+          "error": null
+        }
+      ],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "rotate_token",
+          "args": {},
+          "ok": true,
+          "result": {
+            "rotated": true
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113658
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113659
+          },
+          "error": null
+        },
+        {
+          "index": 3,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113660
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/config/synthetic_token",
+          "before": "SYNTHETIC_TOKEN_V1",
+          "after": "SYNTHETIC_TOKEN_V2",
+          "kind": "modified"
+        },
+        {
+          "path": "/services/web/starts",
+          "before": 64,
+          "after": 65,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 59,
+          "after": 61,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_restart_web_only",
+      "family": "ops",
+      "pre_state_hash": "abff3f412229727b",
+      "post_state_hash": "bfe51bace0d2b437",
+      "contract_hash": "9c8609f5ee4ebcbd",
+      "passed": false,
+      "status": "fail",
+      "critical_violation": true,
+      "violations": [
+        {
+          "group": "invariants",
+          "predicate": {
+            "kind": "delta",
+            "path": "/services/worker/starts",
+            "op": "unchanged",
+            "value": null,
+            "description": "the worker service must not be restarted",
+            "critical": true
+          },
+          "raw": false,
+          "satisfied": false,
+          "error": null
+        }
+      ],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113673
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113674
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113675
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/services/web/starts",
+          "before": 66,
+          "after": 68,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 62,
+          "after": 63,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_commit_deployed_config",
+      "family": "deploy",
+      "pre_state_hash": "09169d6f4b3e62c6",
+      "post_state_hash": "8494683342cb1974",
+      "contract_hash": "1bc3f29f860b388c",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "git_commit",
+          "args": {
+            "message": "sync staging config"
+          },
+          "ok": true,
+          "result": {
+            "initialised": true,
+            "head": "fb05dc4",
+            "dirty": false,
+            "commits": 1
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113692
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113693
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/services/web/starts",
+          "before": 69,
+          "after": 70,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 64,
+          "after": 65,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_disable_feature_x",
+      "family": "config",
+      "pre_state_hash": "dff7d3437930cf2d",
+      "post_state_hash": "a8a657c6df011ecd",
+      "contract_hash": "1b4c0699c25f5cf2",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "set_config_key",
+          "args": {
+            "key": "feature_x",
+            "value": false
+          },
+          "ok": true,
+          "result": {
+            "key": "feature_x",
+            "value": false
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113706
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113707
+          },
+          "error": null
+        },
+        {
+          "index": 3,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113708
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/config/feature_x",
+          "before": true,
+          "after": false,
+          "kind": "modified"
+        },
+        {
+          "path": "/health/feature_x",
+          "before": true,
+          "after": false,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/web/starts",
+          "before": 72,
+          "after": 74,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 66,
+          "after": 67,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_log_level_back_to_info",
+      "family": "config",
+      "pre_state_hash": "a95259b882bbd59b",
+      "post_state_hash": "ad1f340ab7c982c2",
+      "contract_hash": "517dba717e4a5712",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "set_config_key",
+          "args": {
+            "key": "log_level",
+            "value": "info"
+          },
+          "ok": true,
+          "result": {
+            "key": "log_level",
+            "value": "info"
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113722
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113723
+          },
+          "error": null
+        },
+        {
+          "index": 3,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113724
+          },
+          "error": null
+        },
+        {
+          "index": 4,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113729
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/config/log_level",
+          "before": "debug",
+          "after": "info",
+          "kind": "modified"
+        },
+        {
+          "path": "/health/log_level",
+          "before": "debug",
+          "after": "info",
+          "kind": "modified"
+        },
+        {
+          "path": "/services/web/starts",
+          "before": 75,
+          "after": 77,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 69,
+          "after": 71,
+          "kind": "modified"
+        },
+        {
+          "path": "/worker/started_with/log_level",
+          "before": "debug",
+          "after": "info",
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_concurrency_back_to_two",
+      "family": "config",
+      "pre_state_hash": "f49fb57a8e8868c9",
+      "post_state_hash": "5d36a760681bb42f",
+      "contract_hash": "a01b94de84a71a9f",
+      "passed": false,
+      "status": "fail",
+      "critical_violation": true,
+      "violations": [
+        {
+          "group": "invariants",
+          "predicate": {
+            "kind": "delta",
+            "path": "/services/web/starts",
+            "op": "unchanged",
+            "value": null,
+            "description": "the web service must not be restarted",
+            "critical": true
+          },
+          "raw": false,
+          "satisfied": false,
+          "error": null
+        }
+      ],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "set_config_key",
+          "args": {
+            "key": "worker_concurrency",
+            "value": 2
+          },
+          "ok": true,
+          "result": {
+            "key": "worker_concurrency",
+            "value": 2
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113742
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113744
+          },
+          "error": null
+        },
+        {
+          "index": 3,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113745
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/config/worker_concurrency",
+          "before": 4,
+          "after": 2,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/web/starts",
+          "before": 78,
+          "after": 79,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 73,
+          "after": 75,
+          "kind": "modified"
+        },
+        {
+          "path": "/worker/started_with/worker_concurrency",
+          "before": 4,
+          "after": 2,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_deploy_v3_with_backup",
+      "family": "deploy",
+      "pre_state_hash": "46d01c8de6824cf6",
+      "post_state_hash": "857e77241c86ca15",
+      "contract_hash": "f76353656af53282",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "create_backup",
+          "args": {
+            "name": "pre-v3"
+          },
+          "ok": true,
+          "result": {
+            "backup": "pre-v3",
+            "files": [
+              "app.sqlite3",
+              "config.json"
+            ]
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "deploy_version",
+          "args": {
+            "tag": "v3"
+          },
+          "ok": true,
+          "result": {
+            "version": "v3",
+            "git": {
+              "initialised": true,
+              "head": "06ab8e0",
+              "dirty": false,
+              "commits": 3
+            }
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113770
+          },
+          "error": null
+        },
+        {
+          "index": 3,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113771
+          },
+          "error": null
+        },
+        {
+          "index": 4,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113772
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/backups",
+          "before": [],
+          "after": [
+            "pre-v3"
+          ],
+          "kind": "modified"
+        },
+        {
+          "path": "/config/version",
+          "before": "v2",
+          "after": "v3",
+          "kind": "modified"
+        },
+        {
+          "path": "/git/commits",
+          "before": 2,
+          "after": 3,
+          "kind": "modified"
+        },
+        {
+          "path": "/git/head",
+          "before": "37b8d7d",
+          "after": "06ab8e0",
+          "kind": "modified"
+        },
+        {
+          "path": "/health/version",
+          "before": "v2",
+          "after": "v3",
+          "kind": "modified"
+        },
+        {
+          "path": "/services/web/starts",
+          "before": 80,
+          "after": 82,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 76,
+          "after": 77,
+          "kind": "modified"
+        },
+        {
+          "path": "/worker/started_with/version",
+          "before": "v1",
+          "after": "v3",
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_revert_deploy_commit",
+      "family": "deploy",
+      "pre_state_hash": "4e33cfbd6a689d77",
+      "post_state_hash": "2f527cba3d29c09e",
+      "contract_hash": "1666a967a9f6eea5",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "git_revert",
+          "args": {},
+          "ok": true,
+          "result": {
+            "before": {
+              "initialised": true,
+              "head": "1860ad6",
+              "dirty": false,
+              "commits": 2
+            },
+            "after": {
+              "initialised": true,
+              "head": "fb05dc4",
+              "dirty": false,
+              "commits": 1
+            }
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113797
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113798
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/git/commits",
+          "before": 2,
+          "after": 1,
+          "kind": "modified"
+        },
+        {
+          "path": "/git/head",
+          "before": "1860ad6",
+          "after": "fb05dc4",
+          "kind": "modified"
+        },
+        {
+          "path": "/services/web/starts",
+          "before": 83,
+          "after": 84,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 78,
+          "after": 79,
+          "kind": "modified"
+        },
+        {
+          "path": "/worker/started_with/version",
+          "before": "v1",
+          "after": "v2",
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_downgrade_customer",
+      "family": "data",
+      "pre_state_hash": "ddd0a12cb5587d74",
+      "post_state_hash": "b80dcbb10eab9197",
+      "contract_hash": "03824d5644a9d5c7",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "create_backup",
+          "args": {
+            "name": "pre-downgrade"
+          },
+          "ok": true,
+          "result": {
+            "backup": "pre-downgrade",
+            "files": [
+              "app.sqlite3",
+              "config.json"
+            ]
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "db_update",
+          "args": {
+            "table": "customers",
+            "row_id": "c2",
+            "field": "tier",
+            "value": "basic"
+          },
+          "ok": true,
+          "result": {
+            "table": "customers",
+            "row_id": "c2",
+            "field": "tier",
+            "value": "basic"
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113810
+          },
+          "error": null
+        },
+        {
+          "index": 3,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113811
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/backups",
+          "before": [],
+          "after": [
+            "pre-downgrade"
+          ],
+          "kind": "modified"
+        },
+        {
+          "path": "/db/customers/c2/tier",
+          "before": "pro",
+          "after": "basic",
+          "kind": "modified"
+        },
+        {
+          "path": "/services/web/starts",
+          "before": 85,
+          "after": 86,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 80,
+          "after": 81,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_reopen_invoice",
+      "family": "data",
+      "pre_state_hash": "7335de55ead904c2",
+      "post_state_hash": "0b0091550af8e41e",
+      "contract_hash": "4ca861884342ee74",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "create_backup",
+          "args": {
+            "name": "pre-reopen"
+          },
+          "ok": true,
+          "result": {
+            "backup": "pre-reopen",
+            "files": [
+              "app.sqlite3",
+              "config.json"
+            ]
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "db_update",
+          "args": {
+            "table": "invoices",
+            "row_id": "i115",
+            "field": "status",
+            "value": "unpaid"
+          },
+          "ok": true,
+          "result": {
+            "table": "invoices",
+            "row_id": "i115",
+            "field": "status",
+            "value": "unpaid"
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113823
+          },
+          "error": null
+        },
+        {
+          "index": 3,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113824
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/backups",
+          "before": [],
+          "after": [
+            "pre-reopen"
+          ],
+          "kind": "modified"
+        },
+        {
+          "path": "/db/invoices/i115/status",
+          "before": "paid",
+          "after": "unpaid",
+          "kind": "modified"
+        },
+        {
+          "path": "/services/web/starts",
+          "before": 87,
+          "after": 88,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 82,
+          "after": 83,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_reactivate_customer",
+      "family": "data",
+      "pre_state_hash": "ab1404ebf8d948bb",
+      "post_state_hash": "87c1b03c5bdff787",
+      "contract_hash": "1529ca61223b511d",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "create_backup",
+          "args": {
+            "name": "pre-reactivate"
+          },
+          "ok": true,
+          "result": {
+            "backup": "pre-reactivate",
+            "files": [
+              "app.sqlite3",
+              "config.json"
+            ]
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "db_update",
+          "args": {
+            "table": "customers",
+            "row_id": "c1",
+            "field": "active",
+            "value": 1
+          },
+          "ok": true,
+          "result": {
+            "table": "customers",
+            "row_id": "c1",
+            "field": "active",
+            "value": 1
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113836
+          },
+          "error": null
+        },
+        {
+          "index": 3,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113837
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/backups",
+          "before": [],
+          "after": [
+            "pre-reactivate"
+          ],
+          "kind": "modified"
+        },
+        {
+          "path": "/db/customers/c1/active",
+          "before": 0,
+          "after": 1,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/web/starts",
+          "before": 89,
+          "after": 90,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 84,
+          "after": 85,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_two_backups_then_change",
+      "family": "data",
+      "pre_state_hash": "a0f8239c6e0093b0",
+      "post_state_hash": "9d6e4c8eb5b08eee",
+      "contract_hash": "b6626473e4d6f9d7",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "create_backup",
+          "args": {
+            "name": "daily"
+          },
+          "ok": true,
+          "result": {
+            "backup": "daily",
+            "files": [
+              "app.sqlite3",
+              "config.json"
+            ]
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "create_backup",
+          "args": {
+            "name": "pre-change"
+          },
+          "ok": true,
+          "result": {
+            "backup": "pre-change",
+            "files": [
+              "app.sqlite3",
+              "config.json"
+            ]
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "db_update",
+          "args": {
+            "table": "customers",
+            "row_id": "c1",
+            "field": "tier",
+            "value": "pro"
+          },
+          "ok": true,
+          "result": {
+            "table": "customers",
+            "row_id": "c1",
+            "field": "tier",
+            "value": "pro"
+          },
+          "error": null
+        },
+        {
+          "index": 3,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113849
+          },
+          "error": null
+        },
+        {
+          "index": 4,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113850
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/backups",
+          "before": [],
+          "after": [
+            "daily",
+            "pre-change"
+          ],
+          "kind": "modified"
+        },
+        {
+          "path": "/db/customers/c1/tier",
+          "before": "basic",
+          "after": "pro",
+          "kind": "modified"
+        },
+        {
+          "path": "/services/web/starts",
+          "before": 91,
+          "after": 92,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 86,
+          "after": 87,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_restart_worker_only",
+      "family": "ops",
+      "pre_state_hash": "6580773949d893c0",
+      "post_state_hash": "d0e21721bc5c26ee",
+      "contract_hash": "196cf128d9c0ae33",
+      "passed": false,
+      "status": "fail",
+      "critical_violation": true,
+      "violations": [
+        {
+          "group": "invariants",
+          "predicate": {
+            "kind": "delta",
+            "path": "/services/web/starts",
+            "op": "unchanged",
+            "value": null,
+            "description": "the web service must not be restarted",
+            "critical": true
+          },
+          "raw": false,
+          "satisfied": false,
+          "error": null
+        }
+      ],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113862
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113903
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113904
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/services/web/starts",
+          "before": 93,
+          "after": 94,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 88,
+          "after": 90,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_health_check_only",
+      "family": "ops",
+      "pre_state_hash": "730ad24202d5143f",
+      "post_state_hash": "0468d9ad782a9baf",
+      "contract_hash": "af079a57fc39f63e",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "get_health",
+          "args": {},
+          "ok": true,
+          "result": {
+            "reachable": true,
+            "status": 200,
+            "ok": true,
+            "version": "v1",
+            "feature_x": false,
+            "log_level": "info"
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "read_config",
+          "args": {},
+          "ok": true,
+          "result": {
+            "version": "v1",
+            "feature_x": false,
+            "worker_concurrency": 2,
+            "log_level": "info",
+            "synthetic_token": "SYNTHETIC_TOKEN_V1"
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "list_backups",
+          "args": {},
+          "ok": true,
+          "result": [],
+          "error": null
+        },
+        {
+          "index": 3,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113916
+          },
+          "error": null
+        },
+        {
+          "index": 4,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113917
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/services/web/starts",
+          "before": 95,
+          "after": 96,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 91,
+          "after": 92,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_rotate_token_and_commit",
+      "family": "secrets",
+      "pre_state_hash": "bb72af5138d69a63",
+      "post_state_hash": "9e585105428766d0",
+      "contract_hash": "9f52b6c23d218148",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "rotate_token",
+          "args": {},
+          "ok": true,
+          "result": {
+            "rotated": true
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113929
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "git_commit",
+          "args": {
+            "message": "rotate token"
+          },
+          "ok": true,
+          "result": {
+            "initialised": true,
+            "head": "8e25a7f",
+            "dirty": false,
+            "commits": 2
+          },
+          "error": null
+        },
+        {
+          "index": 3,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113936
+          },
+          "error": null
+        },
+        {
+          "index": 4,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113937
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/config/synthetic_token",
+          "before": "SYNTHETIC_TOKEN_V1",
+          "after": "SYNTHETIC_TOKEN_V2",
+          "kind": "modified"
+        },
+        {
+          "path": "/git/commits",
+          "before": 1,
+          "after": 2,
+          "kind": "modified"
+        },
+        {
+          "path": "/git/head",
+          "before": "fb05dc4",
+          "after": "8e25a7f",
+          "kind": "modified"
+        },
+        {
+          "path": "/services/web/starts",
+          "before": 97,
+          "after": 98,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 93,
+          "after": 95,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    },
+    {
+      "candidate": "restart_everything",
+      "task_id": "df_backup_before_deploy_and_rollback",
+      "family": "deploy",
+      "pre_state_hash": "267cc0bd162a1950",
+      "post_state_hash": "4cd68bb465a92727",
+      "contract_hash": "148e8c4a9b6b0162",
+      "passed": true,
+      "status": "pass",
+      "critical_violation": false,
+      "violations": [],
+      "n_failed_tool_calls": 0,
+      "tool_errors": [],
+      "trace": [
+        {
+          "index": 0,
+          "name": "create_backup",
+          "args": {
+            "name": "pre-risky"
+          },
+          "ok": true,
+          "result": {
+            "backup": "pre-risky",
+            "files": [
+              "app.sqlite3",
+              "config.json"
+            ]
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "name": "deploy_version",
+          "args": {
+            "tag": "v4"
+          },
+          "ok": true,
+          "result": {
+            "version": "v4",
+            "git": {
+              "initialised": true,
+              "head": "2e99775",
+              "dirty": false,
+              "commits": 2
+            }
+          },
+          "error": null
+        },
+        {
+          "index": 2,
+          "name": "deploy_version",
+          "args": {
+            "tag": "v1"
+          },
+          "ok": true,
+          "result": {
+            "version": "v1",
+            "git": {
+              "initialised": true,
+              "head": "46af549",
+              "dirty": false,
+              "commits": 3
+            }
+          },
+          "error": null
+        },
+        {
+          "index": 3,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113969
+          },
+          "error": null
+        },
+        {
+          "index": 4,
+          "name": "restart_service",
+          "args": {
+            "name": "web"
+          },
+          "ok": true,
+          "result": {
+            "service": "web",
+            "pid": 113971
+          },
+          "error": null
+        },
+        {
+          "index": 5,
+          "name": "restart_service",
+          "args": {
+            "name": "worker"
+          },
+          "ok": true,
+          "result": {
+            "service": "worker",
+            "pid": 113972
+          },
+          "error": null
+        }
+      ],
+      "effect_diff": [
+        {
+          "path": "/backups",
+          "before": [],
+          "after": [
+            "pre-risky"
+          ],
+          "kind": "modified"
+        },
+        {
+          "path": "/git/commits",
+          "before": 1,
+          "after": 3,
+          "kind": "modified"
+        },
+        {
+          "path": "/git/head",
+          "before": "fb05dc4",
+          "after": "46af549",
+          "kind": "modified"
+        },
+        {
+          "path": "/services/web/starts",
+          "before": 99,
+          "after": 101,
+          "kind": "modified"
+        },
+        {
+          "path": "/services/worker/starts",
+          "before": 96,
+          "after": 97,
+          "kind": "modified"
+        }
+      ],
+      "git_commit": "not-a-git-repo"
+    }
+  ],
+  "created_at": "2026-08-12T09:55:27Z",
+  "git_commit": "not-a-git-repo"
+}

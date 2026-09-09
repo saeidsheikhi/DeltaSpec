@@ -1,0 +1,140 @@
+{
+  "verified_at": "2026-09-05T00:49:45Z",
+  "task_id": "b7a9ee9_1",
+  "checks": {
+    "1_api_surface": {
+      "ok": true,
+      "appworld_version": "0.1.3.post1",
+      "pydantic_version": "1.10.26",
+      "splits": {
+        "train": 90,
+        "dev": 57,
+        "test_normal": 168,
+        "test_challenge": 417
+      },
+      "appworld_public_methods": [
+        "close",
+        "close_all",
+        "evaluate",
+        "execute",
+        "expose_internals",
+        "initialize",
+        "load_state",
+        "parse_api_calls_log",
+        "parse_environment_io_log",
+        "save_logs",
+        "save_state",
+        "task_completed"
+      ],
+      "has_save_state": true,
+      "has_load_state": true,
+      "has_evaluate": true,
+      "signatures": {
+        "load_task_ids": "(dataset_name: str = 'train', difficulty: int | None = None, num_tasks_per_scenario: int | None = None, only_tagged: list[str] | None = None) -> list[str]",
+        "evaluate_task": "(task_id: str, experiment_name: str = 'default', suppress_errors: bool = True, save_report: bool = True) -> appworld.evaluator.TestTracker",
+        "AppWorld.save_state": "(self, state_id: str | None = None) -> str",
+        "AppWorld.load_state": "(self, state_id: str) -> None",
+        "AppWorld.evaluate": "(self, suppress_errors: bool = True) -> appworld.evaluator.TestTracker",
+        "AppWorld.execute": "(self, code: str) -> str"
+      },
+      "task_ground_truth_attrs": [
+        "answer",
+        "api_calls",
+        "compiled_solution_code",
+        "compiled_solution_code_body",
+        "compiled_solution_code_header",
+        "compiled_solution_module",
+        "evaluation_code",
+        "evaluation_code_body",
+        "evaluation_module",
+        "generator_code",
+        "load",
+        "loaded_from_directory",
+        "metadata",
+        "num_compiled_solution_code_lines",
+        "num_solution_code_lines",
+        "private_data",
+        "public_data",
+        "required_apis",
+        "required_apps",
+        "save",
+        "solution_code",
+        "solution_code_body",
+        "solution_code_header",
+        "solution_module",
+        "statistics",
+        "task_id",
+        "test_data",
+        "verify_required_apps"
+      ],
+      "wall_s": 1.1
+    },
+    "2_task_and_state_loading": {
+      "ok": true,
+      "instruction": "Follow all artists of all classical-genre songs in any of my playlists on Spotify.",
+      "n_apps": 10,
+      "n_tables": 89,
+      "n_rows_in_scope": 364826,
+      "detailed_apps": [
+        "spotify"
+      ],
+      "prompt_view_bytes": 9735,
+      "eval_view_bytes": 8809588,
+      "state_fetch_s": 12.4,
+      "wall_s": 12.4
+    },
+    "3-5_tools_restore_and_final_state": {
+      "ok": true,
+      "n_candidates": 2,
+      "snapshot_id": "effectgate_pre",
+      "tool_access_ok": true,
+      "execution_output_tail": "Execution successful.",
+      "delta_run1": {
+        "spotify.UserArtistFollowing": {
+          "n_added": 5,
+          "n_removed": 0,
+          "n_updated": 0
+        }
+      },
+      "delta_run2": {
+        "spotify.UserArtistFollowing": {
+          "n_added": 5,
+          "n_removed": 0,
+          "n_updated": 0
+        }
+      },
+      "restore_exact": true,
+      "residual_delta_after_restore": {},
+      "replay_reproduces_delta": true,
+      "official_success_run1": true,
+      "official_success_run2": true,
+      "replay_reproduces_official_verdict": true,
+      "close_error": "AttributeError: '_freeze_time' object has no attribute 'fake_names'",
+      "wall_s": 50.8
+    },
+    "6_official_evaluator_cross_check": {
+      "ok": true,
+      "in_process_success": true,
+      "out_of_process_success": true,
+      "verdicts_match": true,
+      "num_tests_match": true,
+      "requirements_match": true,
+      "requirements": [
+        "assert answers match.",
+        "assert model changes match spotify.UserArtistFollowing.",
+        "obtain added, removed spotify.UserArtistFollowing records using models.changed_records\nand assert 0 have been removed.",
+        "assert artist_ids of the added artist followings match private_data.to_be_followed_artist_ids."
+      ],
+      "n_state_requirements": 3,
+      "wall_s": 22.1
+    }
+  },
+  "all_ok": true,
+  "summary": {
+    "appworld_version": "0.1.3.post1",
+    "native_snapshot_restore": true,
+    "restore_is_exact": true,
+    "replay_is_deterministic": true,
+    "official_evaluator_cross_checks": true
+  }
+}

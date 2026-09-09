@@ -1,0 +1,28 @@
+{
+  "wall_s": 12.7,
+  "PlaylistSong_fks": {
+    "playlist_id": "spotify.Playlist",
+    "song_id": "spotify.Song"
+  },
+  "Playlist_fks": {
+    "user_id": "todoist.User"
+  },
+  "UserArtistFollowing_fks": {
+    "user_id": "todoist.User",
+    "artist_id": "spotify.Artist"
+  },
+  "prompt_view_has_relations": true,
+  "n_relations_tables": 17,
+  "prompt_view_bytes": 14715,
+  "classical_songs_in_my_playlists": 7,
+  "artist_ids_to_follow": [
+    10,
+    12,
+    21,
+    28,
+    33
+  ],
+  "lint_problems_for_relation": [
+    "implicit: 'artist_id' is a list of ids related to spotify.Song.artist_ids without a declared foreign key"
+  ]
+}

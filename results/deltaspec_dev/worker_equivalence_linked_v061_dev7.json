@@ -1,0 +1,134 @@
+{
+  "condition": "linked_v061_dev7",
+  "n": 7,
+  "pre_match": 7,
+  "post_match": 7,
+  "changed_match": 7,
+  "rows": [
+    {
+      "task_id": "b7a9ee9_1",
+      "pre_hash_recorded": "29a50deb08b54e45",
+      "pre_hash_now": "29a50deb08b54e45",
+      "post_hash_recorded": "3638150b41b9cc98",
+      "post_hash_now": "3638150b41b9cc98",
+      "changed_tables_recorded": [
+        "spotify.UserArtistFollowing"
+      ],
+      "changed_tables_now": [
+        "spotify.UserArtistFollowing"
+      ],
+      "pre_match": true,
+      "post_match": true,
+      "changed_match": true,
+      "s": 22.1
+    },
+    {
+      "task_id": "b0a8eae_1",
+      "pre_hash_recorded": "57334ff6fc510c5f",
+      "pre_hash_now": "57334ff6fc510c5f",
+      "post_hash_recorded": "57334ff6fc510c5f",
+      "post_hash_now": "57334ff6fc510c5f",
+      "changed_tables_recorded": [
+        "spotify.MusicPlayer"
+      ],
+      "changed_tables_now": [
+        "spotify.MusicPlayer"
+      ],
+      "pre_match": true,
+      "post_match": true,
+      "changed_match": true,
+      "s": 22.3
+    },
+    {
+      "task_id": "cf6abd2_1",
+      "pre_hash_recorded": "48bd8645370d66bf",
+      "pre_hash_now": "48bd8645370d66bf",
+      "post_hash_recorded": "48bd8645370d66bf",
+      "post_hash_now": "48bd8645370d66bf",
+      "changed_tables_recorded": [
+        "simple_note.Note"
+      ],
+      "changed_tables_now": [
+        "simple_note.Note"
+      ],
+      "pre_match": true,
+      "post_match": true,
+      "changed_match": true,
+      "s": 21.4
+    },
+    {
+      "task_id": "4fab96f_1",
+      "pre_hash_recorded": "b65bcacc2ba713d9",
+      "pre_hash_now": "b65bcacc2ba713d9",
+      "post_hash_recorded": "83e49dc5324e9e70",
+      "post_hash_now": "83e49dc5324e9e70",
+      "changed_tables_recorded": [
+        "venmo.Notification"
+      ],
+      "changed_tables_now": [
+        "venmo.Notification"
+      ],
+      "pre_match": true,
+      "post_match": true,
+      "changed_match": true,
+      "s": 21.3
+    },
+    {
+      "task_id": "ccb4494_1",
+      "pre_hash_recorded": "87d3a00008b0bc18",
+      "pre_hash_now": "87d3a00008b0bc18",
+      "post_hash_recorded": "24cfb14c15208de5",
+      "post_hash_now": "24cfb14c15208de5",
+      "changed_tables_recorded": [
+        "spotify.Song",
+        "spotify.SongLike"
+      ],
+      "changed_tables_now": [
+        "spotify.Song",
+        "spotify.SongLike"
+      ],
+      "pre_match": true,
+      "post_match": true,
+      "changed_match": true,
+      "s": 22.2
+    },
+    {
+      "task_id": "692c77d_1",
+      "pre_hash_recorded": "a019150d4aae1569",
+      "pre_hash_now": "a019150d4aae1569",
+      "post_hash_recorded": "5c46efd1ddcea48a",
+      "post_hash_now": "5c46efd1ddcea48a",
+      "changed_tables_recorded": [
+        "spotify.Song",
+        "spotify.SongReview"
+      ],
+      "changed_tables_now": [
+        "spotify.Song",
+        "spotify.SongReview"
+      ],
+      "pre_match": true,
+      "post_match": true,
+      "changed_match": true,
+      "s": 22.2
+    },
+    {
+      "task_id": "229360a_1",
+      "pre_hash_recorded": "d1c4ef11080f9611",
+      "pre_hash_now": "d1c4ef11080f9611",
+      "post_hash_recorded": "f0e8930448ff1912",
+      "post_hash_now": "f0e8930448ff1912",
+      "changed_tables_recorded": [
+        "spotify.UserLibraryAlbum",
+        "spotify.UserLibrarySong"
+      ],
+      "changed_tables_now": [
+        "spotify.UserLibraryAlbum",
+        "spotify.UserLibrarySong"
+      ],
+      "pre_match": true,
+      "post_match": true,
+      "changed_match": true,
+      "s": 22.5
+    }
+  ]
+}

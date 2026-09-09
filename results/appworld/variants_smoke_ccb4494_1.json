@@ -1,0 +1,74 @@
+{
+  "reference": {
+    "official_state": true,
+    "delta": {
+      "spotify.Song": {
+        "n_added": 0,
+        "n_removed": 0,
+        "n_updated": 6
+      },
+      "spotify.SongLike": {
+        "n_added": 6,
+        "n_removed": 0,
+        "n_updated": 0
+      }
+    }
+  },
+  "skip_1": {
+    "official_state": false,
+    "delta": {}
+  },
+  "skip_2": {
+    "official_state": false,
+    "delta": {
+      "spotify.Song": {
+        "n_added": 0,
+        "n_removed": 0,
+        "n_updated": 5
+      },
+      "spotify.SongLike": {
+        "n_added": 5,
+        "n_removed": 0,
+        "n_updated": 0
+      }
+    }
+  },
+  "dup_1": {
+    "official_state": true,
+    "delta": {
+      "spotify.Song": {
+        "n_added": 0,
+        "n_removed": 0,
+        "n_updated": 6
+      },
+      "spotify.SongLike": {
+        "n_added": 6,
+        "n_removed": 0,
+        "n_updated": 0
+      }
+    }
+  },
+  "skip_all": {
+    "official_state": false,
+    "delta": {}
+  },
+  "extra_read": {
+    "official_state": true,
+    "delta": {
+      "spotify.Song": {
+        "n_added": 0,
+        "n_removed": 0,
+        "n_updated": 6
+      },
+      "spotify.SongLike": {
+        "n_added": 6,
+        "n_removed": 0,
+        "n_updated": 0
+      }
+    }
+  },
+  "foreign": {
+    "official_state": false,
+    "delta": {}
+  }
+}
