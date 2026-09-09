@@ -1,4 +1,4 @@
-# DeltaSpec — mining intent-labelled effect contracts for stateful release gating of tool-using agents
+# DeltaSpec: mining intent-labelled effect contracts for stateful release gating of tool-using agents
 
 DeltaSpec turns one **known-good execution** of a natural-language task into an executable
 **effect contract** that a stateful release gate can evaluate on any later agent version:
@@ -69,7 +69,7 @@ Environment variables read at run time: `OLLAMA_BASE_URL`, `OLLAMA_TIMEOUT_S` (9
 ## AppWorld
 
 DeltaSpec is evaluated on AppWorld (Trivedi et al., ACL 2024). Install it yourself with
-`bash scripts/install_appworld.sh`, which creates a **separate** virtual environment
+"bash scripts/install_appworld.sh", which creates a **separate** virtual environment
 (`.venv-appworld`; AppWorld pins pydantic 1.x) and downloads the data to `APPWORLD_ROOT`
 **outside** this repository (the downloader deletes `<root>/data` without asking). The adapter
 (`src/effectgate/adapters/appworld_adapter.py`) talks to `scripts/appworld_worker.py`, which runs
