@@ -80,7 +80,7 @@ world exactly (verified per task; `results/appworld/api_verification.json`,
 `determinism.json`), and the official per-task evaluator is used **only** to label candidate
 executions — never to construct contracts.
 
-## Two frozen harness variants — one documented line
+## Two frozen harness variants - one documented line
 
 The paper reports two frozen systems that differ in exactly one line of
 `scripts/appworld_worker.py` (the `AppWorld(...)` constructor in `_open()`):
